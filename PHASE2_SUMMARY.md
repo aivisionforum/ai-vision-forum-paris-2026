@@ -37,7 +37,7 @@ Phase 2 objectives have been **100% completed** on schedule (Days 3-5). The webs
 ### 4. **Enhanced Hero Section** ✅
 - **Three.js particle background:** 100 nodes simulating agent network
 - **Typewriter effect:** Animated tagline reveal
-- **Countdown timer:** Live countdown to May 5, 2026, 9 AM CEST
+- **Countdown timer:** Live countdown to May 4, 2026, 9 AM CEST
 - **Dual CTAs:** "Request Invitation" + "Learn More"
 - **Event badges:** Format, scale, and Chatham House Rule
 - **Scroll indicator:** Animated down arrow
@@ -151,7 +151,7 @@ Each includes:
 |-----------|--------|--------|--------|
 | GitHub Pages live | Yes | Pending activation | ⏳ |
 | Navigation working | Yes | ✅ Fully functional | ✅ |
-| Countdown accurate | May 5, 2026 | ✅ Accurate | ✅ |
+| Countdown accurate | May 4, 2026 | ✅ Accurate | ✅ |
 | Three.js 60fps | 60fps | ✅ 60fps achieved | ✅ |
 | Mobile responsive | All breakpoints | ✅ Tested | ✅ |
 | Lighthouse > 85 | >85 | Pending deployment | ⏳ |

@@ -2,7 +2,7 @@
 
 🚀 **Official website for AI Vision Forum Paris 2026**
 
-**Event Date:** May 5, 2026  
+**Event Date:** May 4, 2026  
 **Location:** Paris, France (Vacielle Palace)  
 **Theme:** Agents Shaping Tomorrow
 

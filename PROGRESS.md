@@ -75,7 +75,7 @@
 - **Features:**
   - Three.js particle background (agent network visualization)
   - Typewriter effect for tagline
-  - Countdown timer to May 5, 2026 (9 AM CEST)
+  - Countdown timer to May 4, 2026 (9 AM CEST)
   - Dual CTAs: "Request Invitation" + "Learn More"
   - Event badges (invitation-only, 100-150 participants, Chatham House Rule)
   - Smooth scroll down indicator
@@ -200,7 +200,7 @@ Route (app)
 |-----------|--------|-------|
 | GitHub Pages live | ⏳ Pending | Workflow ready, needs manual activation |
 | All navigation working | ✅ Complete | Smooth scroll, mobile menu functional |
-| Countdown timer accurate | ✅ Complete | May 5, 2026, 9 AM CEST |
+| Countdown timer accurate | ✅ Complete | May 4, 2026, 9 AM CEST |
 | Three.js hero animation smooth | ✅ Complete | 60fps, optimized particle count |
 | Mobile-responsive | ✅ Complete | Tested breakpoints: 640/768/1024/1280px |
 | Lighthouse Performance > 85 | ⏳ Pending | Will test after deployment |

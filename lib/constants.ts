@@ -3,8 +3,8 @@
 export const EVENT_CONFIG = {
   name: "AI Vision Forum Paris 2026",
   tagline: "Architecting Human-AI Synergy",
-  date: "2026-05-05", // May 5, 2026
-  dateDisplay: "May 5, 2026",
+  date: "2026-05-04", // May 4, 2026
+  dateDisplay: "May 4, 2026",
   location: {
     city: "Paris",
     country: "France",
@@ -117,7 +117,7 @@ export const WORKING_GROUPS = [
   }
 ] as const;
 
-export const COUNTDOWN_TARGET = new Date("2026-05-05T09:00:00+02:00"); // 9 AM CEST
+export const COUNTDOWN_TARGET = new Date("2026-05-04T09:00:00+02:00"); // 9 AM CEST
 
 // Placeholder schedule (to be finalized)
 export const SCHEDULE_OUTLINE = [

@@ -50,7 +50,7 @@ export function AboutSection() {
           />
           <StatCard
             icon={<Calendar className="h-8 w-8" />}
-            value="May 5, 2026"
+            value="May 4, 2026"
             label="Paris, France"
           />
           <StatCard

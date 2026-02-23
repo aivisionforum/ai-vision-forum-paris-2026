@@ -4,7 +4,7 @@
 
 **Event:** AI Vision Forum Paris 2026  
 **Theme:** "Agents Shaping Tomorrow"  
-**Date:** May 5, 2026  
+**Date:** May 4, 2026  
 **Location:** Paris, France (Vacielle Palace)  
 **Aesthetic:** Modern, forward-looking, tech-sophisticated, animation-rich
 

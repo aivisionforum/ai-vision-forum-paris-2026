@@ -11,7 +11,7 @@ interface TimeLeft {
 }
 
 /**
- * Countdown timer to May 5, 2026
+ * Countdown timer to May 4, 2026
  * Features flip animation for smooth transitions
  */
 export function CountdownTimer() {
