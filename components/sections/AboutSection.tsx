@@ -1,6 +1,6 @@
 "use client";
 
-import { Info, Users, Lock, Calendar } from "lucide-react";
+import { Info, Users, Lock, Calendar, Handshake } from "lucide-react";
 import { EVENT_CONFIG } from "@/lib/constants";
 
 /**
@@ -54,7 +54,7 @@ export function AboutSection() {
             label="Paris, France"
           />
           <StatCard
-            icon={<span className="text-3xl">🤝</span>}
+            icon={<Handshake className="h-8 w-8" />}
             value="Chatham House"
             label="Rule Applied"
           />

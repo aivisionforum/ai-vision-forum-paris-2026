@@ -1,10 +1,11 @@
+import { Laptop } from "lucide-react";
 import { TrackLayout } from "@/components/tracks/TrackLayout";
 
 export default function VibeCodingTrack() {
   return (
     <TrackLayout
       title="Vibe Coding & Agentic Open-Source Development"
-      icon="💻"
+      icon={<Laptop className="h-14 w-14 text-primary" />}
       gradient="bg-gradient-to-br from-secondary/20 via-background to-accent/10"
       overview="Featuring the Cello project: autonomous coding agents, Rust rewrites, and the future of software development where humans and AI collaborate seamlessly."
       keyTopics={[

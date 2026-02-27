@@ -21,7 +21,7 @@ export const TRACKS = [
   {
     id: 1,
     title: "AI for Education & Creativity",
-    icon: "🎓",
+    icon: "graduation-cap",
     description: "Reshaping education through generative AI and creative learning experiences",
     color: "primary" as const,
     keywords: ["Education", "Creative Learning", "AI Pedagogy"] as const,
@@ -30,7 +30,7 @@ export const TRACKS = [
   {
     id: 2,
     title: "Vibe Coding & Agentic Open-Source Development",
-    icon: "💻",
+    icon: "laptop",
     description: "Featuring Cello project: autonomous coding agents, Rust rewrites, and the future of development",
     color: "secondary" as const,
     keywords: ["Cello", "Autonomous Agents", "Open Source", "Rust"] as const,
@@ -39,7 +39,7 @@ export const TRACKS = [
   {
     id: 3,
     title: "Governing Autonomous AI",
-    icon: "⚖️",
+    icon: "scale",
     description: "AI Act implementation, autonomous agent ethics, and governance frameworks",
     color: "accent" as const,
     keywords: ["Governance", "Ethics", "AI Act", "Policy"] as const,
@@ -48,7 +48,7 @@ export const TRACKS = [
   {
     id: 4,
     title: "Agentic Open Source Foundations & AI as Global Public Good",
-    icon: "🌍",
+    icon: "globe",
     description: "Multi-stakeholder collaboration, digital public goods, and AI for humanity",
     color: "primary" as const,
     keywords: ["Open Source", "Public Good", "Collaboration", "Foundation Models"] as const,

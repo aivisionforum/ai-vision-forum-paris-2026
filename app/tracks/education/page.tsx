@@ -1,10 +1,11 @@
+import { GraduationCap } from "lucide-react";
 import { TrackLayout } from "@/components/tracks/TrackLayout";
 
 export default function EducationTrack() {
   return (
     <TrackLayout
       title="AI for Next-Gen Learning & Creative Pedagogy"
-      icon="🎓"
+      icon={<GraduationCap className="h-14 w-14 text-primary" />}
       gradient="bg-gradient-to-br from-primary/20 via-background to-secondary/10"
       overview="Reshaping education through generative AI, creative learning experiences, and personalized pedagogy for the 21st century."
       keyTopics={[

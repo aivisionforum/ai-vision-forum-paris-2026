@@ -1,10 +1,11 @@
+import { Globe } from "lucide-react";
 import { TrackLayout } from "@/components/tracks/TrackLayout";
 
 export default function PublicGoodTrack() {
   return (
     <TrackLayout
       title="Agentic Open Source Foundations & AI as Global Public Good"
-      icon="🌍"
+      icon={<Globe className="h-14 w-14 text-primary" />}
       gradient="bg-gradient-to-br from-primary/20 via-background to-accent/10"
       overview="Multi-stakeholder collaboration, digital public goods, and ensuring AI benefits humanity through open-source foundations and equitable access."
       keyTopics={[

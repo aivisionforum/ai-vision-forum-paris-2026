@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, Users } from "lucide-react";
+import { ArrowLeft, Users, BookOpen } from "lucide-react";
 
 interface TrackLayoutProps {
   title: string;
-  icon: string;
+  icon: React.ReactNode;
   gradient: string;
   overview: string;
   keyTopics: string[];
@@ -44,7 +44,7 @@ export function TrackLayout({
             Back to Tracks
           </Link>
 
-          <div className="mb-6 text-6xl">{icon}</div>
+          <div className="mb-6">{icon}</div>
           <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
             {title}
           </h1>
@@ -129,7 +129,7 @@ export function TrackLayout({
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 rounded-lg border border-border bg-card p-4 transition-all hover:border-primary hover:shadow-lg"
                 >
-                  <span className="text-xl">📚</span>
+                  <BookOpen className="h-5 w-5 flex-shrink-0 text-primary" />
                   <span className="flex-1 font-medium">{resource.title}</span>
                   <span className="text-xs text-muted-foreground">↗</span>
                 </a>
