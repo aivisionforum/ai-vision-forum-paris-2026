@@ -1,7 +1,15 @@
 import Link from "next/link";
+import { GraduationCap, Laptop, Scale, Globe, Mic, Landmark, Handshake, Plane, TowerControl } from "lucide-react";
 import { HeroSection } from "@/components/hero/HeroSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { EVENT_CONFIG, TRACKS, SCHEDULE_OUTLINE } from "@/lib/constants";
+
+const TRACK_ICONS: Record<string, React.ReactNode> = {
+  "graduation-cap": <GraduationCap className="h-12 w-12 text-primary" />,
+  "laptop": <Laptop className="h-12 w-12 text-primary" />,
+  "scale": <Scale className="h-12 w-12 text-primary" />,
+  "globe": <Globe className="h-12 w-12 text-primary" />,
+};
 
 export default function Home() {
   return (
@@ -31,7 +39,7 @@ export default function Home() {
                 href={`/tracks/${track.id === 1 ? 'education' : track.id === 2 ? 'vibe-coding' : track.id === 3 ? 'governance' : 'public-good'}`}
                 className="group relative rounded-2xl border border-border bg-card p-8 transition-all hover:border-primary hover:shadow-2xl hover:-translate-y-2"
               >
-                <div className="mb-6 text-6xl">{track.icon}</div>
+                <div className="mb-6">{TRACK_ICONS[track.icon]}</div>
                 <h3 className="mb-4 text-2xl font-bold group-hover:text-primary transition-colors">
                   {track.title}
                 </h3>
@@ -115,7 +123,7 @@ export default function Home() {
 
           <div className="rounded-2xl border border-dashed border-border bg-card/50 p-16">
             <div className="mx-auto max-w-2xl">
-              <div className="mb-6 text-6xl">🎤</div>
+              <div className="mb-6"><Mic className="mx-auto h-14 w-14 text-primary" /></div>
               <h3 className="mb-4 text-2xl font-bold">Speakers Coming Soon</h3>
               <p className="text-muted-foreground">
                 We're curating an exceptional lineup of thought leaders, academics, and industry pioneers. Our Board of Advisors is working to bring you the most impactful voices in agentic AI.
@@ -146,19 +154,19 @@ export default function Home() {
 
                 <div className="space-y-3 text-muted-foreground">
                   <p className="flex items-start gap-3">
-                    <span className="text-xl">🏛️</span>
+                    <Landmark className="h-5 w-5 flex-shrink-0 mt-0.5 text-primary" />
                     <span>
                       A historic palace transformed into a modern conference venue, combining Parisian elegance with cutting-edge facilities.
                     </span>
                   </p>
                   <p className="flex items-start gap-3">
-                    <span className="text-xl">🤝</span>
+                    <Handshake className="h-5 w-5 flex-shrink-0 mt-0.5 text-primary" />
                     <span>
                       Co-located with <strong className="text-foreground">GOSIM Paris 2026</strong>, enabling cross-pollination between governance and AI vision communities.
                     </span>
                   </p>
                   <p className="flex items-start gap-3">
-                    <span className="text-xl">✈️</span>
+                    <Plane className="h-5 w-5 flex-shrink-0 mt-0.5 text-primary" />
                     <span>
                       Easily accessible from Paris Charles de Gaulle Airport (CDG) and central Paris via metro.
                     </span>
@@ -180,7 +188,7 @@ export default function Home() {
 
             <div className="rounded-2xl border border-border bg-card p-8">
               <div className="aspect-video rounded-lg bg-muted flex items-center justify-center">
-                <span className="text-6xl">🗼</span>
+                <TowerControl className="h-16 w-16 text-muted-foreground" />
               </div>
               <p className="mt-4 text-center text-sm text-muted-foreground">
                 Venue photos coming soon

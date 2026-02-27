@@ -1,10 +1,11 @@
+import { Scale } from "lucide-react";
 import { TrackLayout } from "@/components/tracks/TrackLayout";
 
 export default function GovernanceTrack() {
   return (
     <TrackLayout
       title="Anticipatory Governance for Agentic AI"
-      icon="⚖️"
+      icon={<Scale className="h-14 w-14 text-primary" />}
       gradient="bg-gradient-to-br from-accent/20 via-background to-primary/10"
       overview="AI Act implementation, autonomous agent ethics, and governance frameworks for responsible AI development in an agentic future."
       keyTopics={[

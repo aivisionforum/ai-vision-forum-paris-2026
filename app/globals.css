@@ -49,98 +49,98 @@
 
 :root {
   --radius: 0.625rem;
-  
-  /* Light mode (backup - we'll default to dark) */
-  --background: oklch(0.98 0.005 264);
-  --foreground: oklch(0.15 0.03 264);
-  
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0.03 264);
-  
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0.03 264);
-  
-  /* Deep indigo/purple - AI intelligence */
-  --primary: oklch(0.45 0.15 280);
-  --primary-foreground: oklch(0.98 0.005 264);
-  
-  /* Electric cyan - connectivity */
-  --secondary: oklch(0.65 0.18 220);
-  --secondary-foreground: oklch(0.15 0.03 264);
-  
-  --muted: oklch(0.94 0.01 264);
-  --muted-foreground: oklch(0.50 0.04 264);
-  
-  /* Ultra-subtle orange - humanity & warmth (whisper-quiet) */
-  --accent: oklch(0.58 0.07 35);
-  --accent-foreground: oklch(0.15 0.03 264);
-  
+
+  /* Light mode - Monet Nymphéas: warm cream, gold primary, sage & viridian accents */
+  --background: oklch(0.96 0.02 85);
+  --foreground: oklch(0.22 0.02 60);
+
+  --card: oklch(0.97 0.015 85);
+  --card-foreground: oklch(0.22 0.02 60);
+
+  --popover: oklch(0.97 0.015 85);
+  --popover-foreground: oklch(0.22 0.02 60);
+
+  /* Viridian - deep water (works well on light backgrounds) */
+  --primary: oklch(0.44 0.06 165);
+  --primary-foreground: oklch(0.96 0.02 85);
+
+  /* Sage - atmospheric mist */
+  --secondary: oklch(0.69 0.03 170);
+  --secondary-foreground: oklch(0.22 0.02 60);
+
+  --muted: oklch(0.92 0.015 85);
+  --muted-foreground: oklch(0.50 0.02 80);
+
+  /* Honey gold - warm impressionist light */
+  --accent: oklch(0.80 0.13 80);
+  --accent-foreground: oklch(0.22 0.02 60);
+
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.88 0.015 264);
-  --input: oklch(0.88 0.015 264);
-  --ring: oklch(0.45 0.15 280);
-  
-  --chart-1: oklch(0.65 0.18 220);
-  --chart-2: oklch(0.58 0.07 35);
-  --chart-3: oklch(0.45 0.15 280);
-  --chart-4: oklch(0.58 0.07 35);
-  --chart-5: oklch(0.60 0.16 260);
-  
-  --sidebar: oklch(0.98 0.005 264);
-  --sidebar-foreground: oklch(0.15 0.03 264);
-  --sidebar-primary: oklch(0.45 0.15 280);
-  --sidebar-primary-foreground: oklch(0.98 0.005 264);
-  --sidebar-accent: oklch(0.94 0.01 264);
-  --sidebar-accent-foreground: oklch(0.15 0.03 264);
-  --sidebar-border: oklch(0.88 0.015 264);
-  --sidebar-ring: oklch(0.45 0.15 280);
+  --border: oklch(0.88 0.015 80);
+  --input: oklch(0.88 0.015 80);
+  --ring: oklch(0.44 0.06 165);
+
+  --chart-1: oklch(0.80 0.13 80);
+  --chart-2: oklch(0.44 0.06 165);
+  --chart-3: oklch(0.69 0.03 170);
+  --chart-4: oklch(0.89 0.15 93);
+  --chart-5: oklch(0.35 0.04 165);
+
+  --sidebar: oklch(0.96 0.02 85);
+  --sidebar-foreground: oklch(0.22 0.02 60);
+  --sidebar-primary: oklch(0.44 0.06 165);
+  --sidebar-primary-foreground: oklch(0.96 0.02 85);
+  --sidebar-accent: oklch(0.92 0.015 85);
+  --sidebar-accent-foreground: oklch(0.22 0.02 60);
+  --sidebar-border: oklch(0.88 0.015 80);
+  --sidebar-ring: oklch(0.44 0.06 165);
 }
 
 .dark {
-  /* Dark charcoal background - premium tech aesthetic */
-  --background: oklch(0.12 0.02 264);
-  --foreground: oklch(0.95 0.01 264);
-  
-  --card: oklch(0.18 0.025 264);
-  --card-foreground: oklch(0.95 0.01 264);
-  
-  --popover: oklch(0.18 0.025 264);
-  --popover-foreground: oklch(0.95 0.01 264);
-  
-  /* Vibrant indigo/purple for dark mode */
-  --primary: oklch(0.58 0.20 280);
-  --primary-foreground: oklch(0.98 0.005 264);
-  
-  /* Bright electric cyan */
-  --secondary: oklch(0.70 0.20 220);
-  --secondary-foreground: oklch(0.12 0.02 264);
-  
-  --muted: oklch(0.25 0.03 264);
-  --muted-foreground: oklch(0.65 0.05 264);
-  
-  /* Ultra-subtle orange accent - humanity & warmth (whisper-quiet) */
-  --accent: oklch(0.62 0.09 35);
-  --accent-foreground: oklch(0.12 0.02 264);
-  
+  /* Monet Nymphéas dark - warm neutral dark, gold hero, sage & viridian accents */
+  --background: oklch(0.18 0.008 60);
+  --foreground: oklch(0.92 0.03 85);
+
+  --card: oklch(0.22 0.008 60);
+  --card-foreground: oklch(0.92 0.03 85);
+
+  --popover: oklch(0.22 0.008 60);
+  --popover-foreground: oklch(0.92 0.03 85);
+
+  /* Honey gold - warm impressionist light (hero color) */
+  --primary: oklch(0.80 0.13 80);
+  --primary-foreground: oklch(0.18 0.008 60);
+
+  /* Sage - atmospheric mist */
+  --secondary: oklch(0.69 0.03 170);
+  --secondary-foreground: oklch(0.18 0.008 60);
+
+  --muted: oklch(0.25 0.008 60);
+  --muted-foreground: oklch(0.62 0.02 80);
+
+  /* Viridian - deep water accent */
+  --accent: oklch(0.50 0.06 165);
+  --accent-foreground: oklch(0.92 0.03 85);
+
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(0.30 0.03 264);
-  --input: oklch(0.25 0.03 264);
-  --ring: oklch(0.58 0.20 280);
-  
-  --chart-1: oklch(0.70 0.20 220);
-  --chart-2: oklch(0.62 0.09 35);
-  --chart-3: oklch(0.58 0.20 280);
-  --chart-4: oklch(0.62 0.09 35);
-  --chart-5: oklch(0.65 0.18 260);
-  
-  --sidebar: oklch(0.15 0.02 264);
-  --sidebar-foreground: oklch(0.95 0.01 264);
-  --sidebar-primary: oklch(0.58 0.20 280);
-  --sidebar-primary-foreground: oklch(0.98 0.005 264);
-  --sidebar-accent: oklch(0.25 0.03 264);
-  --sidebar-accent-foreground: oklch(0.95 0.01 264);
-  --sidebar-border: oklch(0.30 0.03 264);
-  --sidebar-ring: oklch(0.58 0.20 280);
+  --border: oklch(0.30 0.01 70);
+  --input: oklch(0.25 0.008 60);
+  --ring: oklch(0.80 0.13 80);
+
+  --chart-1: oklch(0.80 0.13 80);
+  --chart-2: oklch(0.50 0.06 165);
+  --chart-3: oklch(0.69 0.03 170);
+  --chart-4: oklch(0.89 0.15 93);
+  --chart-5: oklch(0.35 0.04 165);
+
+  --sidebar: oklch(0.16 0.008 60);
+  --sidebar-foreground: oklch(0.92 0.03 85);
+  --sidebar-primary: oklch(0.80 0.13 80);
+  --sidebar-primary-foreground: oklch(0.18 0.008 60);
+  --sidebar-accent: oklch(0.25 0.008 60);
+  --sidebar-accent-foreground: oklch(0.92 0.03 85);
+  --sidebar-border: oklch(0.30 0.01 70);
+  --sidebar-ring: oklch(0.80 0.13 80);
 }
 
 @layer base {
@@ -185,13 +185,13 @@
     @apply bg-clip-text text-transparent bg-gradient-to-r from-secondary via-primary to-secondary;
   }
   
-  /* Glow effects */
+  /* Glow effects - Monet Nymphéas gold & sage */
   .glow-primary {
-    box-shadow: 0 0 20px oklch(0.58 0.20 280 / 0.3), 0 0 40px oklch(0.58 0.20 280 / 0.2);
+    box-shadow: 0 0 20px oklch(0.80 0.13 80 / 0.3), 0 0 40px oklch(0.80 0.13 80 / 0.2);
   }
-  
+
   .glow-secondary {
-    box-shadow: 0 0 20px oklch(0.70 0.20 220 / 0.3), 0 0 40px oklch(0.70 0.20 220 / 0.2);
+    box-shadow: 0 0 20px oklch(0.69 0.03 170 / 0.3), 0 0 40px oklch(0.69 0.03 170 / 0.2);
   }
   
   /* Animation utilities */
