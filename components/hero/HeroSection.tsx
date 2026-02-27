@@ -50,6 +50,13 @@ export function HeroSection() {
           <TypewriterText text={EVENT_CONFIG.tagline} delay={80} />
         </p>
 
+        {/* Event Date - Prominent Display */}
+        <div className="mb-6">
+          <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-gradient-primary drop-shadow-lg">
+            {EVENT_CONFIG.dateDisplay}
+          </p>
+        </div>
+
         {/* Event details */}
         <div className="mb-12 flex flex-col items-center gap-2 text-base text-white/70 md:text-lg">
           <p className="flex items-center gap-2">
