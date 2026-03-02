@@ -199,7 +199,7 @@ World's largest startup campus. **Event hall (600 capacity) is appropriately siz
 
 ## Notes
 
-- **Date:** May 4, 2026 (Sunday) avoids French holidays (May 1, May 8)
+- **Date:** May 4, 2026 (Monday) avoids French holidays (May 1, May 8)
 - **Weather:** Pleasant spring weather for outdoor networking
 - **Hotels:** Book early - May is busy in Paris
 - **Visas:** Schengen visa required for non-EU (6-8 weeks processing)
