@@ -2,22 +2,32 @@
 
 🚀 **Official website for AI Vision Forum Paris 2026**
 
-**Event Date:** May 4, 2026  
-**Location:** Paris, France (Vacielle Palace)  
-**Theme:** Agents Shaping Tomorrow
+**Event Date:** Monday, May 4, 2026  
+**Location:** Versailles Palace TBD, Paris, France  
+**Theme:** Architecting Human-AI Synergy
 
 ---
 
 ## About
 
-AI Vision Forum Paris 2026 is a premier invitation-only event co-located with GOSIM Paris, bringing together 100-150 thought leaders, researchers, policymakers, and open-source community members to explore **Agents & Agentic Development's Impact on Humanity**.
+AI Vision Forum Paris 2026 is a premier invitation-only convening co-located with GOSIM Paris 2026, bringing together 100-150 thought leaders, researchers, policymakers, and open-source community members to address the structural shifts reshaping how humans and AI collaborate.
+
+### Guiding Question
+
+**As AI reshapes human roles, how do we ensure human core values remain central?**
 
 ### Four Tracks
 
-1. **AI for Next-Gen Learning & Creative Pedagogy**
-2. **Vibe Coding & Agentic Open-Source Development** (featuring Cello project)
-3. **Anticipatory Governance for Agentic AI**
-4. **Agentic Open Source Foundations & AI as Global Public Good**
+1. **AI & Education** — Teaching for a Post-Code World
+2. **Human-AI Synergy** — From Vibe Coding to the Dark Factory (featuring CELLO)
+3. **Ethics & Governance** — Governing at Two Levels: Human Ethics AND Agent Security
+4. **Digital Public Goods** — When AI Trains on the Commons
+
+### Format
+
+- **Scale:** 100–150 invited participants
+- **Rule:** Chatham House Rule
+- **Domain:** [paris2026.visionforum.ai](https://paris2026.visionforum.ai)
 
 ---
 
@@ -25,10 +35,9 @@ AI Vision Forum Paris 2026 is a premier invitation-only event co-located with GO
 
 - **Framework:** Next.js 14 (App Router)
 - **Styling:** TailwindCSS v4 + shadcn/ui
-- **Animations:** Framer Motion, Three.js, GSAP
+- **Animations:** Framer Motion, Three.js
 - **Language:** TypeScript
 - **Deployment:** GitHub Pages
-- **Domain:** paris2026.visionforum.ai
 
 ---
 
@@ -43,7 +52,7 @@ AI Vision Forum Paris 2026 is a premier invitation-only event co-located with GO
 
 ```bash
 # Clone the repository
-git clone https://github.com/annaxiebot/ai-vision-forum-paris-2026.git
+git clone https://github.com/aivisionforum/ai-vision-forum-paris-2026.git
 cd ai-vision-forum-paris-2026
 
 # Install dependencies
@@ -55,139 +64,65 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+### Build for Production
+
+```bash
+npm run build
+npm run start
+```
+
 ---
 
-## Development
-
-### Project Structure
+## Project Structure
 
 ```
 ai-vision-forum-paris-2026/
 ├── app/                  # Next.js App Router pages
-│   ├── page.tsx          # Home page (hero + overview)
-│   ├── theme/            # Four tracks detail
-│   ├── cello/            # Cello project spotlight
-│   ├── speakers/         # Advisors & speakers
-│   ├── schedule/         # Event agenda
-│   ├── venue/            # Location & logistics
-│   ├── register/         # Invitation request form
-│   └── about/            # AI Vision Forum background
-├── components/
-│   ├── ui/               # shadcn/ui components
-│   ├── hero/             # Hero animations
-│   ├── tracks/           # Track cards
-│   └── navigation/       # Nav, footer
+├── components/           # React components
+│   ├── ui/              # shadcn/ui components
+│   ├── hero/            # Hero section
+│   ├── tracks/          # Track cards
+│   └── navigation/      # Nav, footer
 ├── lib/
-│   ├── utils.ts          # Utility functions
-│   └── constants.ts      # Event config
-├── public/               # Static assets
-└── DESIGN_SYSTEM.md      # Design guidelines
-```
-
-### Scripts
-
-```bash
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run start        # Start production server
-npm run lint         # Run ESLint
+│   ├── utils.ts         # Utility functions
+│   └── constants.ts     # Event configuration
+├── public/              # Static assets
+└── DESIGN_SYSTEM.md     # Design guidelines
 ```
 
 ---
 
 ## Design System
 
-See [DESIGN_SYSTEM.md](./DESIGN_SYSTEM.md) for comprehensive design guidelines, including:
+See [DESIGN_SYSTEM.md](./DESIGN_SYSTEM.md) for design guidelines including:
 
-- Color palette (deep indigo, electric cyan, warm coral)
+- Color palette (Deep Indigo, Electric Cyan, Warm Coral)
 - Typography scale
 - Animation principles
-- Component variants
+- Component patterns
 - Accessibility standards
 
 ---
 
-## Deployment
+## Key References
 
-Deployed via GitHub Pages with custom domain: **paris2026.visionforum.ai**
-
-```bash
-npm run build
-npm run export  # Generate static site
-```
+- **AOSF (Agentic Open Source Foundation):** [aosf-org.github.io](https://aosf-org.github.io)
+- **CELLO Leaderboard:** [aosf-org.github.io/cello](https://aosf-org.github.io/cello)
+- **Main AI Vision Forum:** [visionforum.ai](https://visionforum.ai/)
+- **GOSIM Paris 2026:** [paris2026.gosim.org](https://paris2026.gosim.org)
 
 ---
 
-## Contributing
+## Contact
 
-This is a private project for AI Vision Forum Paris 2026. For questions or collaboration:
+For program inquiries or collaboration:
 
-- **Program Committee:** [TBA]
-- **Board of Advisors:** Jesse McCrosky (Egen), Emily Chen (KAIYUANSHE)
+- **GitHub:** [github.com/aivisionforum](https://github.com/aivisionforum)
+- **Twitter:** [@aivisionforum](https://twitter.com/aivisionforum)
+- **LinkedIn:** [AI Vision Forum](https://www.linkedin.com/company/ai-vision-forum)
 
 ---
 
 ## License
 
 © 2026 AI Vision Forum. All rights reserved.
-
----
-
-## Development Timeline
-
-### Phase 1: Foundation ✅ (Complete)
-- [x] GitHub repo setup
-- [x] Next.js + TailwindCSS initialization
-- [x] shadcn/ui configuration
-- [x] Design system created
-- [x] Dependencies installed (Framer Motion, Three.js, GSAP)
-
-### Phase 2: Core Pages (In Progress)
-- [ ] Hero section with particle animation
-- [ ] Theme overview (4 tracks)
-- [ ] Navigation & footer
-- [ ] About section
-
-### Phase 3: Interactive Features
-- [ ] Cello project spotlight
-- [ ] AIGC gallery
-- [ ] Speakers carousel
-- [ ] Schedule timeline
-
-### Phase 4: Advanced Animations
-- [ ] Three.js hero background
-- [ ] Scroll-triggered animations
-- [ ] Code stream effects
-- [ ] Countdown timer
-
-### Phase 5: Venue & Logistics
-- [ ] Interactive Paris map
-- [ ] Venue photo carousel
-- [ ] Travel info
-- [ ] Registration form
-
-### Phase 6: Polish & Optimization
-- [ ] Multilingual (EN/CN/FR)
-- [ ] Dark/light mode toggle
-- [ ] Accessibility audit
-- [ ] Performance optimization
-- [ ] SEO
-
-### Phase 7: Content Population
-- [ ] Copywriting
-- [ ] Speaker bios
-- [ ] AIGC submissions
-- [ ] Sponsor logos
-
-### Phase 8: Launch
-- [ ] GitHub Pages deployment
-- [ ] Custom domain setup
-- [ ] Analytics
-- [ ] Final QA
-
----
-
-**Target Launch:** Mid-March 2026  
-**Status:** Phase 1 Complete - Moving to Phase 2
-
-🚀 Building an exceptional experience for AI Vision Forum Paris 2026!

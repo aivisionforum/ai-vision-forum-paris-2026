@@ -9,7 +9,7 @@ export const EVENT_CONFIG = {
   location: {
     city: "Paris",
     country: "France",
-    venue: "Vacielle Palace (or TBD)",
+    venue: "Versailles Palace TBD",
     colocated: "GOSIM Paris 2026"
   },
   scale: "100–150 invited participants",
