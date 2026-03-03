@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { GraduationCap, Laptop, Scale, Globe, Mic, Landmark, Handshake, Plane, TowerControl } from "lucide-react";
+import { GraduationCap, Laptop, Scale, Globe, Mic, Landmark, Handshake, Plane, TowerControl, Code2, ExternalLink, Award } from "lucide-react";
 import { HeroSection } from "@/components/hero/HeroSection";
 import { AboutSection } from "@/components/sections/AboutSection";
-import { EVENT_CONFIG, TRACKS, SCHEDULE_OUTLINE } from "@/lib/constants";
+import { EVENT_CONFIG, TRACKS, SCHEDULE_OUTLINE, AOSF_INFO, CELLO_PROJECT } from "@/lib/constants";
 
 const TRACK_ICONS: Record<string, React.ReactNode> = {
   "graduation-cap": <GraduationCap className="h-12 w-12 text-primary" />,
@@ -36,13 +36,14 @@ export default function Home() {
             {TRACKS.map((track) => (
               <Link
                 key={track.id}
-                href={`/tracks/${track.id === 1 ? 'education' : track.id === 2 ? 'vibe-coding' : track.id === 3 ? 'governance' : 'public-good'}`}
+                href={`/tracks/${track.slug}`}
                 className="group relative rounded-2xl border border-border bg-card p-8 transition-all hover:border-primary hover:shadow-2xl hover:-translate-y-2"
               >
                 <div className="mb-6">{TRACK_ICONS[track.icon]}</div>
-                <h3 className="mb-4 text-2xl font-bold group-hover:text-primary transition-colors">
+                <h3 className="mb-2 text-2xl font-bold group-hover:text-primary transition-colors">
                   {track.title}
                 </h3>
+                <p className="mb-4 text-sm font-medium text-accent">{track.subtitle}</p>
                 <p className="text-muted-foreground mb-6">{track.description}</p>
 
                 {/* Keywords */}
@@ -78,7 +79,7 @@ export default function Home() {
         <div className="container mx-auto max-w-6xl">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-4xl font-bold md:text-5xl lg:text-6xl">
-              <span className="text-gradient-primary">Event Schedule</span>
+              <span className="text-gradient-primary">Draft Schedule</span>
             </h2>
             <p className="mx-auto max-w-3xl text-lg text-muted-foreground md:text-xl">
               A full day of insights, discussions, and networking
@@ -98,6 +99,12 @@ export default function Home() {
                 </div>
                 <div className="flex-1">
                   <h3 className="font-semibold text-lg">{item.title}</h3>
+                  {'subtitle' in item && item.subtitle && (
+                    <p className="mt-1 text-sm text-muted-foreground">{item.subtitle}</p>
+                  )}
+                  {'format' in item && item.format && (
+                    <p className="mt-2 text-xs font-medium text-accent">{item.format}</p>
+                  )}
                 </div>
               </div>
             ))}
@@ -105,7 +112,7 @@ export default function Home() {
 
           <div className="mt-12 text-center">
             <p className="text-sm text-muted-foreground">
-              * Schedule subject to change. Final agenda will be shared with confirmed participants.
+              * Draft schedule from v3 planning document. Final agenda will be shared with confirmed participants.
             </p>
           </div>
         </div>
@@ -126,11 +133,120 @@ export default function Home() {
               <div className="mb-6"><Mic className="mx-auto h-14 w-14 text-primary" /></div>
               <h3 className="mb-4 text-2xl font-bold">Speakers Coming Soon</h3>
               <p className="text-muted-foreground">
-                We're curating an exceptional lineup of thought leaders, academics, and industry pioneers. Our Board of Advisors is working to bring you the most impactful voices in agentic AI.
+                We're curating an exceptional lineup of thought leaders, academics, and industry pioneers to address the structural shifts shaping agentic AI.
               </p>
               <p className="mt-4 text-sm text-muted-foreground">
                 Check back soon or request an invitation to be notified when speakers are announced.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AOSF & Cello Section */}
+      <section id="aosf" className="py-24 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-4xl font-bold md:text-5xl lg:text-6xl">
+              <span className="text-gradient-primary">Partner: AOSF</span>
+            </h2>
+            <p className="mx-auto max-w-3xl text-lg text-muted-foreground md:text-xl">
+              {AOSF_INFO.tagline}
+            </p>
+          </div>
+
+          <div className="grid gap-8 lg:grid-cols-2 mb-12">
+            {/* AOSF Info */}
+            <div className="rounded-2xl border border-border bg-card p-8">
+              <div className="mb-6 flex items-center gap-3">
+                <Code2 className="h-8 w-8 text-primary" />
+                <h3 className="text-2xl font-bold">{AOSF_INFO.name}</h3>
+              </div>
+              <p className="mb-6 text-muted-foreground">{AOSF_INFO.description}</p>
+              
+              <div className="mb-6">
+                <h4 className="mb-3 font-semibold">Five Core Functions:</h4>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  {AOSF_INFO.coreFunctions.map((func, index) => (
+                    <li key={index} className="flex items-start gap-2">
+                      <span className="text-primary">•</span>
+                      <span>{func}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="flex gap-4">
+                <a
+                  href={AOSF_INFO.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+                >
+                  Visit AOSF <ExternalLink className="h-4 w-4" />
+                </a>
+                <a
+                  href={AOSF_INFO.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+                >
+                  GitHub <ExternalLink className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
+
+            {/* Cello Project */}
+            <div className="rounded-2xl border border-accent/30 bg-gradient-to-br from-accent/10 to-transparent p-8">
+              <div className="mb-6 flex items-center gap-3">
+                <Award className="h-8 w-8 text-accent" />
+                <h3 className="text-2xl font-bold">{CELLO_PROJECT.name}</h3>
+              </div>
+              <p className="mb-2 text-sm font-medium text-accent">{CELLO_PROJECT.fullName}</p>
+              <p className="mb-6 text-muted-foreground">{CELLO_PROJECT.description}</p>
+              
+              <div className="mb-6 rounded-lg bg-card/50 p-4">
+                <p className="text-sm">
+                  <strong className="text-foreground">Track:</strong> {CELLO_PROJECT.track}
+                </p>
+                <p className="mt-2 text-sm text-muted-foreground">{CELLO_PROJECT.demoStatus}</p>
+              </div>
+
+              <div className="flex gap-4">
+                <a
+                  href={CELLO_PROJECT.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline"
+                >
+                  View Leaderboard <ExternalLink className="h-4 w-4" />
+                </a>
+                <a
+                  href={CELLO_PROJECT.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline"
+                >
+                  GitHub <ExternalLink className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Key Stats */}
+          <div className="rounded-2xl border border-border bg-card p-8">
+            <h3 className="mb-6 text-center text-xl font-bold">Key Stats: The Agentic AI Landscape</h3>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+              {AOSF_INFO.keyStats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <p className="text-2xl font-bold text-gradient-primary mb-1">
+                    {stat.split(' — ')[0]}
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    {stat.split(' — ')[1]}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

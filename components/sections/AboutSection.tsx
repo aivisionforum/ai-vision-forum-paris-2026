@@ -1,7 +1,7 @@
 "use client";
 
-import { Info, Users, Lock, Calendar, Handshake } from "lucide-react";
-import { EVENT_CONFIG } from "@/lib/constants";
+import { Info, Users, Lock, Calendar, Handshake, Lightbulb, Target } from "lucide-react";
+import { EVENT_CONFIG, WHY_NOW, VALUE_PROPOSITION } from "@/lib/constants";
 
 /**
  * About section with mission and Chatham House Rule
@@ -20,19 +20,47 @@ export function AboutSection() {
           </p>
         </div>
 
-        {/* Mission Statement */}
+        {/* Guiding Question */}
+        <div className="mb-12 rounded-2xl border border-accent/30 bg-gradient-to-br from-accent/10 to-transparent p-8 md:p-12">
+          <div className="mb-6 flex items-center gap-3">
+            <Target className="h-7 w-7 text-accent" />
+            <h3 className="text-2xl font-bold">Guiding Question</h3>
+          </div>
+          <p className="text-xl font-medium text-foreground md:text-2xl">
+            "{EVENT_CONFIG.guidingQuestion}"
+          </p>
+          <p className="mt-4 text-muted-foreground">
+            For Paris, sharpened by the reality that AI coding agents are now reshaping software development, open-source governance, and the $3T SaaS industry itself.
+          </p>
+        </div>
+
+        {/* Why Now */}
         <div className="mb-16 rounded-2xl border border-border bg-card p-8 md:p-12">
           <div className="mb-6 flex items-center gap-3">
-            <Info className="h-6 w-6 text-primary" />
-            <h3 className="text-2xl font-bold">Our Mission</h3>
+            <Lightbulb className="h-6 w-6 text-primary" />
+            <h3 className="text-2xl font-bold">{WHY_NOW.title}</h3>
           </div>
-          <div className="space-y-4 text-muted-foreground">
-            <p className="text-lg">
-              AI Vision Forum Paris 2026 brings together thought leaders, developers, researchers, and policymakers to explore the transformative potential of agentic AI across four critical domains: <strong className="text-foreground">education</strong>, <strong className="text-foreground">autonomous development</strong>, <strong className="text-foreground">governance</strong>, and <strong className="text-foreground">digital public goods</strong>.
-            </p>
-            <p>
-              As part of <strong className="text-secondary">GOSIM Paris 2026</strong>, we foster intimate, high-signal conversations that shape actionable frameworks for humanity's AI future.
-            </p>
+          <p className="mb-8 text-muted-foreground">{WHY_NOW.intro}</p>
+          <div className="space-y-6">
+            {WHY_NOW.shifts.map((shift) => (
+              <div key={shift.id} className="border-l-4 border-primary pl-6">
+                <h4 className="mb-2 text-lg font-semibold">{shift.title}</h4>
+                <p className="text-muted-foreground">{shift.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Value Proposition */}
+        <div className="mb-16">
+          <h3 className="mb-8 text-center text-3xl font-bold">Our Unique Value Proposition</h3>
+          <div className="grid gap-6 md:grid-cols-2">
+            {VALUE_PROPOSITION.map((item) => (
+              <div key={item.id} className="rounded-xl border border-border bg-card p-6 transition-all hover:border-primary hover:shadow-lg">
+                <h4 className="mb-3 text-xl font-semibold text-primary">{item.title}</h4>
+                <p className="text-muted-foreground">{item.description}</p>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -40,8 +68,8 @@ export function AboutSection() {
         <div className="mb-16 grid gap-6 md:grid-cols-4">
           <StatCard
             icon={<Users className="h-8 w-8" />}
-            value="100-150"
-            label="Participants"
+            value="100–150"
+            label="Invited Participants"
           />
           <StatCard
             icon={<Lock className="h-8 w-8" />}
@@ -50,13 +78,13 @@ export function AboutSection() {
           />
           <StatCard
             icon={<Calendar className="h-8 w-8" />}
-            value="May 4, 2026"
+            value={EVENT_CONFIG.dateDisplay}
             label="Paris, France"
           />
           <StatCard
             icon={<Handshake className="h-8 w-8" />}
-            value="Chatham House"
-            label="Rule Applied"
+            value="GOSIM 2026"
+            label="Co-located"
           />
         </div>
 
