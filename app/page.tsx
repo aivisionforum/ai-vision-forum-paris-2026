@@ -20,8 +20,8 @@ export default function Home() {
       {/* About Section */}
       <AboutSection />
 
-      {/* Tracks Section */}
-      <section id="tracks" className="py-24 px-4 bg-card/30">
+      {/* Tracks Section — cool blue tint */}
+      <section id="tracks" className="py-24 px-4" style={{ background: "linear-gradient(180deg, rgba(93, 132, 168, 0.06) 0%, rgba(93, 132, 168, 0.03) 50%, transparent 100%)" }}>
         <div className="container mx-auto max-w-6xl">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-4xl font-bold md:text-5xl lg:text-6xl">
@@ -118,8 +118,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Speakers Section */}
-      <section id="speakers" className="py-24 px-4 bg-card/30">
+      {/* Speakers Section — warm rose tint */}
+      <section id="speakers" className="py-24 px-4" style={{ background: "linear-gradient(180deg, rgba(202, 124, 129, 0.06) 0%, rgba(202, 124, 129, 0.03) 50%, transparent 100%)" }}>
         <div className="container mx-auto max-w-6xl text-center">
           <h2 className="mb-4 text-4xl font-bold md:text-5xl lg:text-6xl">
             <span className="text-gradient-primary">Speakers</span>
@@ -163,7 +163,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold">{AOSF_INFO.name}</h3>
               </div>
               <p className="mb-6 text-muted-foreground">{AOSF_INFO.description}</p>
-              
+
               <div className="mb-6">
                 <h4 className="mb-3 font-semibold">Five Core Functions:</h4>
                 <ul className="space-y-2 text-sm text-muted-foreground">
@@ -204,7 +204,7 @@ export default function Home() {
               </div>
               <p className="mb-2 text-sm font-medium text-accent">{CELLO_PROJECT.fullName}</p>
               <p className="mb-6 text-muted-foreground">{CELLO_PROJECT.description}</p>
-              
+
               <div className="mb-6 rounded-lg bg-card/50 p-4">
                 <p className="text-sm">
                   <strong className="text-foreground">Track:</strong> {CELLO_PROJECT.track}
@@ -314,8 +314,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-24 px-4">
+      {/* Final CTA — warm gold tint */}
+      <section className="py-24 px-4" style={{ background: "linear-gradient(180deg, rgba(211, 165, 106, 0.05) 0%, rgba(211, 165, 106, 0.02) 50%, transparent 100%)" }}>
         <div className="container mx-auto max-w-4xl text-center">
           <div className="rounded-3xl border-2 border-accent/50 bg-gradient-to-br from-accent/10 via-primary/5 to-secondary/10 p-12 md:p-16">
             <h2 className="mb-6 text-3xl font-bold md:text-4xl lg:text-5xl">
