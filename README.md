@@ -2,8 +2,8 @@
 
 🚀 **Official website for AI Vision Forum Paris 2026**
 
-**Event Date:** Monday, May 4, 2026  
-**Location:** Versailles Palace TBD, Paris, France  
+**Event Date:** Monday, May 4, 2026
+**Location:** TBD, Paris, France
 **Theme:** Architecting Human-AI Synergy
 
 ---
