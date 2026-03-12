@@ -325,7 +325,9 @@ export default function Home() {
               AI Vision Forum Paris 2026 is invitation-only. Request your invitation to participate in shaping the future of agentic AI.
             </p>
             <a
-              href="/register"
+              href="https://cfp.gosim.org"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block rounded-full bg-accent px-10 py-5 text-xl font-bold text-accent-foreground transition-all hover:scale-105 hover:shadow-2xl hover:shadow-accent/40"
             >
               Request Invitation

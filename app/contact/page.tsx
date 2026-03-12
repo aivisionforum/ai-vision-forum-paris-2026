@@ -105,12 +105,14 @@ export default function ContactPage() {
           <div className="rounded-2xl border border-border bg-card p-8">
             <h2 className="mb-6 text-2xl font-bold">Quick Links</h2>
             <nav className="space-y-4">
-              <Link
-                href="/register"
+              <a
+                href="https://cfp.gosim.org"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block rounded-lg border border-border bg-background p-4 font-medium transition-all hover:border-accent hover:bg-accent/5"
               >
                 Request Invitation →
-              </Link>
+              </a>
               <Link
                 href="/#tracks"
                 className="block rounded-lg border border-border bg-background p-4 font-medium transition-all hover:border-primary hover:bg-primary/5"

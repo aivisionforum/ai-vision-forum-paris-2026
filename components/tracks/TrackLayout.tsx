@@ -150,7 +150,9 @@ export function TrackLayout({
               Request an invitation to join the conversation
             </p>
             <a
-              href="/register"
+              href="https://cfp.gosim.org"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block rounded-full bg-accent px-8 py-4 font-semibold text-accent-foreground transition-all hover:scale-105 hover:shadow-xl hover:shadow-accent/30"
             >
               Request Invitation

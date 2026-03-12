@@ -130,7 +130,9 @@ export function HeroSection() {
         {/* CTA Buttons */}
         <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
           <a
-            href="/register"
+            href="https://cfp.gosim.org"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group relative overflow-hidden rounded-full bg-accent px-8 py-4 text-lg font-semibold text-accent-foreground transition-all hover:scale-105 hover:shadow-xl hover:shadow-accent/30"
           >
             <span className="relative z-10">Request Invitation</span>

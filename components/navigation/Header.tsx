@@ -12,7 +12,7 @@ const NAV_ITEMS = [
   { label: "Schedule", href: "/#schedule", highlight: false },
   { label: "Speakers", href: "/#speakers", highlight: false },
   { label: "Venue", href: "/#venue", highlight: false },
-  { label: "Register", href: "/register", highlight: true },
+  { label: "Register", href: "https://cfp.gosim.org", highlight: true, external: true },
 ] as const;
 
 /**
@@ -62,25 +62,41 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-            {NAV_ITEMS.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={(e) => {
-                  if (item.href.startsWith("/#")) {
-                    e.preventDefault();
-                    handleNavClick(item.href);
-                  }
-                }}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  item.highlight
-                    ? "rounded-full bg-accent px-4 py-2 text-accent-foreground hover:bg-accent/90"
-                    : "text-foreground/80"
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {NAV_ITEMS.map((item) =>
+              item.external ? (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`text-sm font-medium transition-colors hover:text-primary ${
+                    item.highlight
+                      ? "rounded-full bg-accent px-4 py-2 text-accent-foreground hover:bg-accent/90"
+                      : "text-foreground/80"
+                  }`}
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={(e) => {
+                    if (item.href.startsWith("/#")) {
+                      e.preventDefault();
+                      handleNavClick(item.href);
+                    }
+                  }}
+                  className={`text-sm font-medium transition-colors hover:text-primary ${
+                    item.highlight
+                      ? "rounded-full bg-accent px-4 py-2 text-accent-foreground hover:bg-accent/90"
+                      : "text-foreground/80"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              )
+            )}
 
             {/* Language Switcher */}
             <button
@@ -116,27 +132,44 @@ export function Header() {
         {isMobileMenuOpen && (
           <div className="lg:hidden mt-4 py-4 border-t border-border">
             <div className="flex flex-col gap-4">
-              {NAV_ITEMS.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={(e) => {
-                    if (item.href.startsWith("/#")) {
-                      e.preventDefault();
-                      handleNavClick(item.href);
-                    } else {
-                      setIsMobileMenuOpen(false);
-                    }
-                  }}
-                  className={`text-base font-medium transition-colors ${
-                    item.highlight
-                      ? "rounded-full bg-accent px-4 py-2 text-center text-accent-foreground"
-                      : "text-foreground/80 hover:text-primary px-4 py-2"
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {NAV_ITEMS.map((item) =>
+                item.external ? (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`text-base font-medium transition-colors ${
+                      item.highlight
+                        ? "rounded-full bg-accent px-4 py-2 text-center text-accent-foreground"
+                        : "text-foreground/80 hover:text-primary px-4 py-2"
+                    }`}
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={(e) => {
+                      if (item.href.startsWith("/#")) {
+                        e.preventDefault();
+                        handleNavClick(item.href);
+                      } else {
+                        setIsMobileMenuOpen(false);
+                      }
+                    }}
+                    className={`text-base font-medium transition-colors ${
+                      item.highlight
+                        ? "rounded-full bg-accent px-4 py-2 text-center text-accent-foreground"
+                        : "text-foreground/80 hover:text-primary px-4 py-2"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                )
+              )}
 
               {/* Language Switcher Mobile */}
               <button

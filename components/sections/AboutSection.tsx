@@ -83,7 +83,7 @@ export function AboutSection() {
           />
           <StatCard
             icon={<Handshake className="h-8 w-8" />}
-            value="GOSIM 2026"
+            value="GOSIM Paris 2026"
             label="Co-located"
           />
         </div>
