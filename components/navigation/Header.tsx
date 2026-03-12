@@ -6,12 +6,12 @@ import { Menu, X, Globe } from "lucide-react";
 import { Logo } from "@/components/branding/Logo";
 
 const NAV_ITEMS = [
-  { label: "Home", href: "/", highlight: false },
-  { label: "Tracks", href: "/#tracks", highlight: false },
-  { label: "Cello", href: "/tracks/vibe-coding", highlight: false },
-  { label: "Schedule", href: "/#schedule", highlight: false },
-  { label: "Speakers", href: "/#speakers", highlight: false },
-  { label: "Venue", href: "/#venue", highlight: false },
+  { label: "Home", href: "/", highlight: false, external: false },
+  { label: "Tracks", href: "/#tracks", highlight: false, external: false },
+  { label: "Cello", href: "/tracks/vibe-coding", highlight: false, external: false },
+  { label: "Schedule", href: "/#schedule", highlight: false, external: false },
+  { label: "Speakers", href: "/#speakers", highlight: false, external: false },
+  { label: "Venue", href: "/#venue", highlight: false, external: false },
   { label: "Register", href: "https://cfp.gosim.org", highlight: true, external: true },
 ] as const;
 
