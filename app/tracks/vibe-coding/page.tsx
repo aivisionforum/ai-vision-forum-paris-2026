@@ -21,11 +21,11 @@ export default function VibeCodingTrack() {
       resources={[
         {
           title: "Cello Project GitHub",
-          url: "https://github.com/cello-project",
+          url: "https://github.com/aosf-org/cello",
         },
         {
           title: "The State of Agentic Development (Report)",
-          url: "#",
+          url: "https://github.com/aosf-org/aosf/blob/main/research/presentations/agentic-landscape-executive.pdf",
         },
       ]}
     >

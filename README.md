@@ -62,8 +62,6 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
 ### Build for Production
 
 ```bash
@@ -86,21 +84,8 @@ ai-vision-forum-paris-2026/
 ├── lib/
 │   ├── utils.ts         # Utility functions
 │   └── constants.ts     # Event configuration
-├── public/              # Static assets
-└── DESIGN_SYSTEM.md     # Design guidelines
+└── public/              # Static assets
 ```
-
----
-
-## Design System
-
-See [DESIGN_SYSTEM.md](./DESIGN_SYSTEM.md) for design guidelines including:
-
-- Color palette (Deep Indigo, Electric Cyan, Warm Coral)
-- Typography scale
-- Animation principles
-- Component patterns
-- Accessibility standards
 
 ---
 
