@@ -79,7 +79,7 @@ export default function Home() {
         <div className="container mx-auto max-w-6xl">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-4xl font-bold md:text-5xl lg:text-6xl">
-              <span className="text-gradient-primary">Draft Schedule</span>
+              <span className="text-gradient-primary">Schedule</span>
             </h2>
             <p className="mx-auto max-w-3xl text-lg text-muted-foreground md:text-xl">
               A full day of insights, discussions, and networking
@@ -112,7 +112,7 @@ export default function Home() {
 
           <div className="mt-12 text-center">
             <p className="text-sm text-muted-foreground">
-              * Draft schedule. Times are indicative. Final agenda will be published on forum.gosim.org.
+              * Times are indicative. Final agenda will be published on forum.gosim.org.
             </p>
           </div>
         </div>
