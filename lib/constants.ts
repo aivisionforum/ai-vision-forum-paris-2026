@@ -21,17 +21,6 @@ export const EVENT_CONFIG = {
 export const TRACKS = [
   {
     id: 1,
-    slug: "education",
-    title: "Agentic AI in Applications",
-    subtitle: "Learning, Creativity, and Real-World Use",
-    icon: "graduation-cap",
-    description: "Showcasing real-world deployments across education, creativity, and knowledge work — from AI-native learning environments to tools that amplify human capability.",
-    color: "primary" as const,
-    keywords: ["AI4Education", "Embodied AI", "Multimodal Knowledge", "Personalized Learning"] as const,
-    highlight: false
-  },
-  {
-    id: 2,
     slug: "vibe-coding",
     title: "Agentic AI Systems — Human–AI Symbiosis",
     subtitle: "Building the Agentic Ecosystem",
@@ -40,6 +29,17 @@ export const TRACKS = [
     color: "secondary" as const,
     keywords: ["Agentic Software Engineering", "Autonomous Workflows", "Open-Source Coordination", "Standards"] as const,
     highlight: true
+  },
+  {
+    id: 2,
+    slug: "education",
+    title: "Agentic AI in Applications",
+    subtitle: "Learning, Creativity, and Real-World Use",
+    icon: "graduation-cap",
+    description: "Showcasing real-world deployments across education, creativity, and knowledge work — from AI-native learning environments to tools that amplify human capability.",
+    color: "primary" as const,
+    keywords: ["AI4Education", "Embodied AI", "Multimodal Knowledge", "Personalized Learning"] as const,
+    highlight: false
   },
   {
     id: 3,
@@ -172,9 +172,9 @@ export const COUNTDOWN_TARGET = new Date("2026-05-04T09:00:00+02:00"); // 9 AM C
 export const SCHEDULE_OUTLINE = [
   { time: "08:30–09:00", title: "Registration & Coffee" },
   { time: "09:00–09:15", title: "Opening Remarks" },
-  { time: "09:15–10:30", title: "Panel 1: Agentic AI in Applications", subtitle: "Learning, Creativity, and Real-World Use", format: "Keynote + Panel" },
+  { time: "09:15–10:30", title: "Panel 1: Agentic AI Systems — Human–AI Symbiosis", subtitle: "Building the Agentic Ecosystem", format: "Keynote + Panel" },
   { time: "10:30–10:45", title: "Break" },
-  { time: "10:45–12:00", title: "Panel 2: Agentic AI Systems — Human–AI Symbiosis", subtitle: "Building the Agentic Ecosystem", format: "Keynote + Panel" },
+  { time: "10:45–12:00", title: "Panel 2: Agentic AI in Applications", subtitle: "Learning, Creativity, and Real-World Use", format: "Keynote + Panel" },
   { time: "12:00–13:30", title: "Lunch + AIGC Spotlight Showcase", subtitle: "Creative & technical works from the AI community", format: "Demo showcase" },
   { time: "13:30–14:45", title: "Panel 3: Trusted Agentic AI", subtitle: "Governance, Safety, and Sovereignty", format: "Keynote + Panel" },
   { time: "14:45–15:00", title: "Break" },
