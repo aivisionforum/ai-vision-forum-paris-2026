@@ -8,7 +8,7 @@ import { Logo } from "@/components/branding/Logo";
 const NAV_ITEMS = [
   { label: "Home", href: "/", highlight: false, external: false },
   { label: "Tracks", href: "/#tracks", highlight: false, external: false },
-  { label: "Cello", href: "/tracks/vibe-coding", highlight: false, external: false },
+  { label: "AOSF", href: "/#aosf", highlight: false, external: false },
   { label: "Schedule", href: "/#schedule", highlight: false, external: false },
   { label: "Speakers", href: "/#speakers", highlight: false, external: false },
   { label: "Venue", href: "/#venue", highlight: false, external: false },

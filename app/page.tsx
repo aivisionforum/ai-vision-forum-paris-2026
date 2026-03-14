@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { GraduationCap, Laptop, Scale, Globe, Mic, Landmark, Handshake, Plane, TowerControl, Code2, ExternalLink, Award } from "lucide-react";
+import { GraduationCap, Laptop, Scale, Globe, Mic, Landmark, Handshake, Plane, TowerControl, Code2, ExternalLink } from "lucide-react";
 import { HeroSection } from "@/components/hero/HeroSection";
 import { AboutSection } from "@/components/sections/AboutSection";
-import { EVENT_CONFIG, TRACKS, SCHEDULE_OUTLINE, AOSF_INFO, CELLO_PROJECT } from "@/lib/constants";
+import { EVENT_CONFIG, TRACKS, SCHEDULE_OUTLINE, AOSF_INFO } from "@/lib/constants";
 
 const TRACK_ICONS: Record<string, React.ReactNode> = {
   "graduation-cap": <GraduationCap className="h-12 w-12 text-primary" />,
@@ -25,10 +25,10 @@ export default function Home() {
         <div className="container mx-auto max-w-6xl">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-4xl font-bold md:text-5xl lg:text-6xl">
-              <span className="text-gradient-primary">Four Tracks</span>
+              <span className="text-gradient-primary">Four Panels</span>
             </h2>
             <p className="mx-auto max-w-3xl text-lg text-muted-foreground md:text-xl">
-              Explore the future of AI across education, development, governance, and public good
+              Explore the future of agentic AI across applications, systems, governance, and digital public goods
             </p>
           </div>
 
@@ -112,7 +112,7 @@ export default function Home() {
 
           <div className="mt-12 text-center">
             <p className="text-sm text-muted-foreground">
-              * Draft schedule from v3 planning document. Final agenda will be shared with confirmed participants.
+              * Draft schedule. Times are indicative. Final agenda will be published on forum.gosim.org.
             </p>
           </div>
         </div>
@@ -143,7 +143,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* AOSF & Cello Section */}
+      {/* AOSF Section */}
       <section id="aosf" className="py-24 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="mb-16 text-center">
@@ -155,7 +155,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid gap-8 lg:grid-cols-2 mb-12">
+          <div className="mb-12">
             {/* AOSF Info */}
             <div className="rounded-2xl border border-border bg-card p-8">
               <div className="mb-6 flex items-center gap-3">
@@ -165,7 +165,7 @@ export default function Home() {
               <p className="mb-6 text-muted-foreground">{AOSF_INFO.description}</p>
 
               <div className="mb-6">
-                <h4 className="mb-3 font-semibold">Five Core Functions:</h4>
+                <h4 className="mb-3 font-semibold">Core Functions:</h4>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   {AOSF_INFO.coreFunctions.map((func, index) => (
                     <li key={index} className="flex items-start gap-2">
@@ -190,42 +190,6 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
-                >
-                  GitHub <ExternalLink className="h-4 w-4" />
-                </a>
-              </div>
-            </div>
-
-            {/* Cello Project */}
-            <div className="rounded-2xl border border-accent/30 bg-gradient-to-br from-accent/10 to-transparent p-8">
-              <div className="mb-6 flex items-center gap-3">
-                <Award className="h-8 w-8 text-accent" />
-                <h3 className="text-2xl font-bold">{CELLO_PROJECT.name}</h3>
-              </div>
-              <p className="mb-2 text-sm font-medium text-accent">{CELLO_PROJECT.fullName}</p>
-              <p className="mb-6 text-muted-foreground">{CELLO_PROJECT.description}</p>
-
-              <div className="mb-6 rounded-lg bg-card/50 p-4">
-                <p className="text-sm">
-                  <strong className="text-foreground">Track:</strong> {CELLO_PROJECT.track}
-                </p>
-                <p className="mt-2 text-sm text-muted-foreground">{CELLO_PROJECT.demoStatus}</p>
-              </div>
-
-              <div className="flex gap-4">
-                <a
-                  href={CELLO_PROJECT.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline"
-                >
-                  View Leaderboard <ExternalLink className="h-4 w-4" />
-                </a>
-                <a
-                  href={CELLO_PROJECT.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline"
                 >
                   GitHub <ExternalLink className="h-4 w-4" />
                 </a>

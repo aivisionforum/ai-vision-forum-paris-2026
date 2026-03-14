@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     "AI Agents",
     "Open Source AI",
     "AI Governance",
-    "Cello Project",
+    "AIGC Spotlight",
     "GOSIM Paris"
   ],
   authors: [{ name: "AI Vision Forum" }],

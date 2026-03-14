@@ -4,19 +4,16 @@ import { TrackLayout } from "@/components/tracks/TrackLayout";
 export default function GovernanceTrack() {
   return (
     <TrackLayout
-      title="Anticipatory Governance for Agentic AI"
+      title="Trusted Agentic AI"
       icon={<Scale className="h-14 w-14 text-primary" />}
       gradient="bg-gradient-to-br from-accent/20 via-background to-primary/10"
-      overview="AI Act implementation, autonomous agent ethics, and governance frameworks for responsible AI development in an agentic future."
+      overview="Addressing the governance, safety, and sovereignty challenges of increasingly autonomous systems. Topics include evaluation frameworks, responsible deployment of coding agents, regulatory trends (e.g., AI Acts), sovereign AI models, and anticipatory governance approaches for maintaining trust at scale."
       keyTopics={[
-        "EU AI Act: compliance and implementation strategies",
-        "Ethical frameworks for autonomous AI agents",
-        "Accountability in multi-agent systems",
-        "Transparency and explainability requirements",
-        "Risk assessment methodologies for agentic AI",
-        "International cooperation on AI governance",
-        "Public participation in AI policy-making",
-        "Adaptive regulation for rapidly evolving technology",
+        "Anticipatory Governance for Agentic AI",
+        "Autonomous coding agents and responsible deployment",
+        "AI Act compliance and regulatory landscape",
+        "Sovereign AI models and national considerations",
+        "Evaluation frameworks and trust metrics",
       ]}
       resources={[
         {
@@ -27,31 +24,20 @@ export default function GovernanceTrack() {
           title: "OECD AI Principles",
           url: "https://www.oecd.org/digital/artificial-intelligence/",
         },
-        {
-          title: "Partnership on AI - Resources",
-          url: "https://partnershiponai.org/",
-        },
       ]}
     >
       <div className="prose prose-invert max-w-none">
-        <h2 className="text-2xl font-bold mb-4">Anticipatory Governance Approach</h2>
+        <h2 className="text-2xl font-bold mb-4">Governance, Safety, and Sovereignty</h2>
         <p className="text-muted-foreground">
-          Rather than reactive regulation, anticipatory governance proactively shapes AI development through multi-stakeholder dialogue, scenario planning, and adaptive frameworks. This track brings together policymakers, technologists, and civil society to co-create governance models that balance innovation with safety.
+          As AI systems become increasingly autonomous, maintaining trust requires proactive governance frameworks. This panel brings together trust and safety experts alongside social and economic impact researchers to address the challenges of governing agentic AI at scale — from regulatory compliance to sovereign AI considerations.
         </p>
-        
-        <div className="mt-6 p-6 rounded-lg border border-primary/30 bg-primary/5">
-          <h3 className="text-lg font-bold mb-2 text-primary">Key Discussion</h3>
-          <p className="text-sm text-muted-foreground">
-            <strong>Governing Autonomous Agents:</strong> When AI agents make decisions independently, who is responsible? How do we audit their behavior? What rights should they have (if any)? Join a facilitated debate with legal scholars, AI researchers, and ethicists.
-          </p>
-        </div>
 
-        <h3 className="text-xl font-bold mt-8 mb-4">Practical Outcomes</h3>
+        <h3 className="text-xl font-bold mt-8 mb-4">Key Discussions</h3>
         <ul className="space-y-2 text-muted-foreground">
-          <li>Draft policy recommendations for agentic AI oversight</li>
-          <li>Case study analysis of AI governance successes and failures</li>
-          <li>Toolkit for organizations implementing AI ethics boards</li>
-          <li>Network with regulators and compliance experts</li>
+          <li>Anticipatory governance approaches for agentic AI systems</li>
+          <li>Responsible deployment frameworks for autonomous coding agents</li>
+          <li>Navigating the AI Act and evolving regulatory landscape</li>
+          <li>Building evaluation frameworks and trust metrics at scale</li>
         </ul>
       </div>
     </TrackLayout>

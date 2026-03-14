@@ -22,45 +22,45 @@ export const TRACKS = [
   {
     id: 1,
     slug: "education",
-    title: "AI & Education",
-    subtitle: "Teaching for a Post-Code World",
+    title: "Agentic AI in Applications",
+    subtitle: "Learning, Creativity, and Real-World Use",
     icon: "graduation-cap",
-    description: "What do we teach when AI writes the code? How do curricula shift from syntax to specification, judgment, and validation?",
+    description: "Showcasing real-world deployments across education, creativity, and knowledge work — from AI-native learning environments to tools that amplify human capability.",
     color: "primary" as const,
-    keywords: ["Post-Code Learning", "Specification", "Judgment", "Validation"] as const,
+    keywords: ["AI4Education", "Embodied AI", "Multimodal Knowledge", "Personalized Learning"] as const,
     highlight: false
   },
   {
     id: 2,
     slug: "vibe-coding",
-    title: "Human-AI Synergy",
-    subtitle: "From Vibe Coding to the Dark Factory",
+    title: "Agentic AI Systems — Human–AI Symbiosis",
+    subtitle: "Building the Agentic Ecosystem",
     icon: "laptop",
-    description: "How do humans and AI agents actually collaborate? Where should humans stay in the loop — and where is oversight a bottleneck?",
+    description: "A 360° exploration of building agentic systems ecosystems — from use cases and business value to architectures and collaborative development.",
     color: "secondary" as const,
-    keywords: ["L0-L5 Framework", "Dark Factory", "Spec-Driven", "Cello"] as const,
+    keywords: ["Agentic Software Engineering", "Autonomous Workflows", "Open-Source Coordination", "Standards"] as const,
     highlight: true
   },
   {
     id: 3,
     slug: "governance",
-    title: "Ethics & Governance",
-    subtitle: "Governing at Two Levels: Human Ethics AND Agent Security",
+    title: "Trusted Agentic AI",
+    subtitle: "Governance, Safety, and Sovereignty",
     icon: "scale",
-    description: "How do we govern when both builders and reviewers are AI? How does EU AI Act meet Cedar policies?",
+    description: "Addressing the governance, safety, and sovereignty challenges of increasingly autonomous systems — from evaluation frameworks to regulatory trends.",
     color: "accent" as const,
-    keywords: ["EU AI Act", "OWASP Top 10", "Cedar Policies", "Agent Security"] as const,
+    keywords: ["Anticipatory Governance", "AI Act Compliance", "Sovereign AI", "Trust Metrics"] as const,
     highlight: false
   },
   {
     id: 4,
     slug: "public-good",
-    title: "Digital Public Goods",
-    subtitle: "When AI Trains on the Commons",
+    title: "Open Token & Digital Public Goods",
+    subtitle: "Foundations for an Agentic Commons",
     icon: "globe",
-    description: "Is a single global open-source commons still possible? How do we fund sustainability in a fragmenting world?",
+    description: "Examining how agentic open-source foundations can function as global public infrastructure through value-driven projects and sustainable funding models.",
     color: "primary" as const,
-    keywords: ["OpenToken", "Sustainability", "Foundation Governance", "AOSF"] as const,
+    keywords: ["Public AI Tokens", "AOSF", "Sustainable Models", "Open-Source Governance"] as const,
     highlight: false
   }
 ] as const;
@@ -119,13 +119,11 @@ export const AOSF_INFO = {
   description: "AOSF is the first open source foundation purpose-built for the age of AI-generated code, bridging the gap between AI-generated software and the governance, security, and quality frameworks needed to make it trustworthy.",
   url: "https://aosf-org.github.io",
   github: "https://github.com/aosf-org",
-  celloUrl: "https://aosf-org.github.io/cello",
   coreFunctions: [
     "Vibe-Coded Project Repository with quality tiers (Experimental → Validated → Production-Ready → Enterprise-Certified)",
     "Rust Migration Initiative — AI-assisted translation of critical C/C++ infrastructure to memory-safe Rust",
     "Agentic-Native Operations — Agent-assisted code review with transparent audit trails",
-    "Ethical AI Development Standards — Attribution, licensing, and human-in-the-loop frameworks",
-    "CELLO Leaderboard — 100% open-source LLM code evaluation benchmark"
+    "Ethical AI Development Standards — Attribution, licensing, and human-in-the-loop frameworks"
   ],
   keyStats: [
     "$47–93B — Projected agentic AI market by 2030–2032",
@@ -147,16 +145,6 @@ export const SOCIAL_LINKS = {
   linkedin: "https://www.linkedin.com/company/ai-vision-forum"
 } as const;
 
-// Cello Project
-export const CELLO_PROJECT = {
-  name: "CELLO",
-  fullName: "Code Evaluation LLM Leaderboard (Open)",
-  description: "Open-source LLM coding leaderboard benchmarking Rust rewrites of Redis, SQLite, Git, Nginx. Shares methodology DNA with StrongDM's approach — both use AI agents to produce production-quality Rust code and treat benchmark validation as the quality gate instead of human review.",
-  track: "Human-AI Synergy",
-  demoStatus: "Optional pending project readiness — if included, slot during AIGC Spotlight lunch",
-  url: "https://aosf-org.github.io/cello",
-  github: "https://github.com/aosf-org/cello"
-} as const;
 
 // Expected Outcomes
 export const EXPECTED_OUTCOMES = [
@@ -164,7 +152,7 @@ export const EXPECTED_OUTCOMES = [
   "AIGC Spotlight Awards",
   "Strengthened EU open-source AI ties at the critical pre-AI Act enforcement moment",
   "Concrete position on two-layer governance (human ethics + agent security)",
-  "Optional: Cello public debut if ready"
+  "AIGC Spotlight Showcase featuring creative and technical works from the AI community"
 ] as const;
 
 // Key References
@@ -180,14 +168,17 @@ export const KEY_REFERENCES = [
 
 export const COUNTDOWN_TARGET = new Date("2026-05-04T09:00:00+02:00"); // 9 AM CEST
 
-// Draft schedule based on v3 planning document
+// Draft schedule from PC planning document
 export const SCHEDULE_OUTLINE = [
-  { time: "08:30–09:15", title: "Registration + Opening" },
-  { time: "09:15–10:45", title: "Track A: AI & Education", subtitle: "\"The End of Learn to Code\" — what comes next", format: "Keynote + panel" },
-  { time: "11:00–12:30", title: "Track B: Human-AI Synergy", subtitle: "L0–L5 framework; Dark Factory case study; Cello parallels", format: "Keynote + panel" },
-  { time: "12:30–14:00", title: "Lunch + AIGC Spotlight", subtitle: "Cello demo (if ready), AI-native OSS showcase", format: "Demos + awards" },
-  { time: "14:00–15:30", title: "Track C: Ethics & Governance", subtitle: "Governance gap; EU AI Act meets agent policies; OWASP Top 10", format: "Keynote + panel" },
-  { time: "15:45–17:15", title: "Track D: Digital Public Goods", subtitle: "OpenToken; foundation fragmentation; sustainability crisis", format: "Keynote + panel" },
-  { time: "17:15–17:45", title: "Closing Remarks" },
-  { time: "18:00–20:30", title: "Working Dinner", subtitle: "Tables by topic: governance, education, sustainability, specs", format: "Themed tables" }
+  { time: "08:30–09:00", title: "Registration & Coffee" },
+  { time: "09:00–09:15", title: "Opening Remarks" },
+  { time: "09:15–10:30", title: "Panel 1: Agentic AI in Applications", subtitle: "Learning, Creativity, and Real-World Use", format: "Keynote + Panel" },
+  { time: "10:30–10:45", title: "Break" },
+  { time: "10:45–12:00", title: "Panel 2: Agentic AI Systems — Human–AI Symbiosis", subtitle: "Building the Agentic Ecosystem", format: "Keynote + Panel" },
+  { time: "12:00–13:30", title: "Lunch + AIGC Spotlight Showcase", subtitle: "Creative & technical works from the AI community", format: "Demo showcase" },
+  { time: "13:30–14:45", title: "Panel 3: Trusted Agentic AI", subtitle: "Governance, Safety, and Sovereignty", format: "Keynote + Panel" },
+  { time: "14:45–15:00", title: "Break" },
+  { time: "15:00–16:15", title: "Panel 4: Open Token & Digital Public Goods", subtitle: "Foundations for an Agentic Commons", format: "Keynote + Panel" },
+  { time: "16:15–16:45", title: "Synthesis & Closing" },
+  { time: "17:00–19:30", title: "Networking Dinner" }
 ] as const;

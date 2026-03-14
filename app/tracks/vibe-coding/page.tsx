@@ -1,28 +1,22 @@
 import { Laptop } from "lucide-react";
 import { TrackLayout } from "@/components/tracks/TrackLayout";
 
-export default function VibeCodingTrack() {
+export default function AgenticSystemsTrack() {
   return (
     <TrackLayout
-      title="Vibe Coding & Agentic Open-Source Development"
+      title="Agentic AI Systems — Human–AI Symbiosis"
       icon={<Laptop className="h-14 w-14 text-primary" />}
       gradient="bg-gradient-to-br from-secondary/20 via-background to-accent/10"
-      overview="Featuring the Cello project: autonomous coding agents, Rust rewrites, and the future of software development where humans and AI collaborate seamlessly."
+      overview="A 360° exploration of building agentic systems ecosystems — from use cases and business value to architectures and collaborative development. Topics include Agentic Software Engineering (ASE), autonomous workflows, enterprise deployments, open-source coordination, standards, and emerging industry leaders shaping the human–AI partnership model."
       keyTopics={[
-        "The Cello project: AI-driven Rust development",
-        "Autonomous coding agents and their capabilities",
-        "Vibe-based programming: intuitive human-AI interfaces",
-        "Open-source sustainability with AI contributors",
-        "Code review and quality assurance by AI",
-        "Pair programming with AI: best practices",
-        "Rust ecosystem and AI tooling",
-        "Licensing and attribution in AI-generated code",
+        "Key aspects of agentic systems ecosystem: use cases, business values, architecture, collaboration",
+        "State of the art: Agentic Software Engineering and business solutions",
+        "Agentic innovation for industry, consumer, and public sectors",
+        "Autonomous workflows and enterprise deployments",
+        "Open-source coordination and standards",
+        "Human–AI partnership models and collaboration patterns",
       ]}
       resources={[
-        {
-          title: "Cello Project GitHub",
-          url: "https://github.com/aosf-org/cello",
-        },
         {
           title: "The State of Agentic Development (Report)",
           url: "https://github.com/aosf-org/aosf/blob/main/research/presentations/agentic-landscape-executive.pdf",
@@ -30,24 +24,17 @@ export default function VibeCodingTrack() {
       ]}
     >
       <div className="prose prose-invert max-w-none">
-        <h2 className="text-2xl font-bold mb-4">Spotlight: The Cello Project</h2>
+        <h2 className="text-2xl font-bold mb-4">Building the Agentic Ecosystem</h2>
         <p className="text-muted-foreground">
-          Cello is an experimental autonomous development framework that rewrites legacy codebases into modern Rust. It represents the cutting edge of agentic coding: AI agents that understand context, make architectural decisions, and produce production-ready code.
+          This panel brings together enterprise architects, agentic system builders, standards experts, and developers to explore the full spectrum of building agentic systems — from defining use cases and demonstrating business value, to designing architectures and fostering collaborative development across open-source communities.
         </p>
-        
-        <div className="mt-6 p-6 rounded-lg border border-accent/30 bg-accent/5">
-          <h3 className="text-lg font-bold mb-2 text-accent">Featured Session</h3>
-          <p className="text-sm text-muted-foreground">
-            Live demo: Watch an AI agent refactor a Python project to Rust in real-time, with commentary from the Cello maintainers on design decisions, challenges, and the future roadmap.
-          </p>
-        </div>
 
-        <h3 className="text-xl font-bold mt-8 mb-4">What You'll Learn</h3>
+        <h3 className="text-xl font-bold mt-8 mb-4">What You'll Explore</h3>
         <ul className="space-y-2 text-muted-foreground">
-          <li>How to integrate AI coding assistants into your workflow</li>
-          <li>Designing prompts and specifications for autonomous agents</li>
-          <li>Evaluating AI-generated code for security and performance</li>
-          <li>Building multi-agent systems for complex projects</li>
+          <li>How agentic software engineering is transforming development workflows</li>
+          <li>Architecture patterns for autonomous and semi-autonomous systems</li>
+          <li>Enterprise deployment strategies and lessons learned</li>
+          <li>Standards and security frameworks for agentic ecosystems</li>
         </ul>
       </div>
     </TrackLayout>
