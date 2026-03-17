@@ -33,7 +33,7 @@ export const TRACKS = [
   {
     id: 2,
     slug: "education",
-    title: "Agentic AI in Applications",
+    title: "Agentic AI in Education",
     subtitle: "Learning, Creativity, and Real-World Use",
     icon: "graduation-cap",
     description: "Showcasing real-world deployments across education, creativity, and knowledge work — from AI-native learning environments to tools that amplify human capability.",
