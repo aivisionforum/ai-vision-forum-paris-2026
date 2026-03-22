@@ -1,14 +1,18 @@
 "use client";
 
+import Link from "next/link";
 import { ChevronDown, MapPin, Handshake, Target, Users, Lock } from "lucide-react";
 import { CountdownTimer } from "./CountdownTimer";
 import { TypewriterText } from "./TypewriterText";
 import { EVENT_CONFIG } from "@/lib/constants";
+import { useTranslation } from "@/lib/i18n";
 
 /**
  * Enhanced hero section with Three.js particles, countdown, and typewriter effect
  */
 export function HeroSection() {
+  const { t } = useTranslation();
+
   const handleScrollDown = () => {
     const tracksSection = document.querySelector("#tracks");
     if (tracksSection) {
@@ -98,13 +102,13 @@ export function HeroSection() {
 
         {/* Animated tagline */}
         <p className="mb-8 text-xl font-medium text-foreground/70 md:text-2xl lg:text-3xl">
-          <TypewriterText text={EVENT_CONFIG.tagline} delay={80} />
+          <TypewriterText text={t.hero.tagline} delay={80} />
         </p>
 
         {/* Event Date - Prominent Display */}
         <div className="mb-6">
           <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-gradient-primary drop-shadow-lg">
-            {EVENT_CONFIG.dateDisplay}
+            {t.hero.dateDisplay}
           </p>
         </div>
 
@@ -118,7 +122,7 @@ export function HeroSection() {
           </p>
           <p className="flex items-center gap-2">
             <Handshake className="h-5 w-5 text-accent" />
-            <span>Co-located with {EVENT_CONFIG.location.colocated}</span>
+            <span>{t.hero.colocatedWith} {EVENT_CONFIG.location.colocated}</span>
           </p>
         </div>
 
@@ -130,12 +134,12 @@ export function HeroSection() {
         {/* CTA Buttons */}
         <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
           <a
-            href="https://cfp.gosim.org"
+            href="https://cfp.gosim.org/"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative overflow-hidden rounded-full bg-accent px-8 py-4 text-lg font-semibold text-accent-foreground transition-all hover:scale-105 hover:shadow-xl hover:shadow-accent/30"
           >
-            <span className="relative z-10">Request Invitation</span>
+            <span className="relative z-10">{t.hero.requestInvitation}</span>
             <div className="absolute inset-0 bg-gradient-to-r from-accent via-primary to-accent opacity-0 transition-opacity group-hover:opacity-100" />
           </a>
           <a
@@ -149,20 +153,20 @@ export function HeroSection() {
             }}
             className="rounded-full border-2 border-foreground/20 bg-white/40 backdrop-blur px-8 py-4 text-lg font-semibold text-foreground transition-all hover:border-foreground/35 hover:bg-white/60 hover:shadow-lg"
           >
-            Learn More
+            {t.hero.learnMore}
           </a>
         </div>
 
         {/* Event badges */}
         <div className="mt-12 flex flex-wrap items-center justify-center gap-4 text-xs font-medium text-foreground/50 md:text-sm">
           <span className="inline-flex items-center gap-1.5 rounded-full border border-foreground/15 bg-white/40 backdrop-blur px-4 py-2">
-            <Target className="h-3.5 w-3.5" /> {EVENT_CONFIG.format}
+            <Target className="h-3.5 w-3.5" /> {t.hero.invitationOnly}
           </span>
           <span className="inline-flex items-center gap-1.5 rounded-full border border-foreground/15 bg-white/40 backdrop-blur px-4 py-2">
             <Users className="h-3.5 w-3.5" /> {EVENT_CONFIG.scale}
           </span>
           <span className="inline-flex items-center gap-1.5 rounded-full border border-foreground/15 bg-white/40 backdrop-blur px-4 py-2">
-            <Lock className="h-3.5 w-3.5" /> {EVENT_CONFIG.rule}
+            <Lock className="h-3.5 w-3.5" /> {t.hero.chathamHouseRule}
           </span>
         </div>
       </div>

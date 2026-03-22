@@ -4,25 +4,25 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, Globe } from "lucide-react";
 import { Logo } from "@/components/branding/Logo";
-
-const NAV_ITEMS = [
-  { label: "Home", href: "/", highlight: false, external: false },
-  { label: "Tracks", href: "/#tracks", highlight: false, external: false },
-  { label: "AOSF", href: "/#aosf", highlight: false, external: false },
-  { label: "Schedule", href: "/#schedule", highlight: false, external: false },
-  { label: "Speakers", href: "/#speakers", highlight: false, external: false },
-  { label: "Venue", href: "/#venue", highlight: false, external: false },
-  { label: "Register", href: "https://cfp.gosim.org", highlight: true, external: true },
-] as const;
+import { useTranslation, LOCALE_LABELS } from "@/lib/i18n";
 
 /**
  * Sticky header navigation with mobile hamburger menu
- * Features smooth scroll, dark mode toggle, and language switcher
+ * Features smooth scroll and language switcher (EN/CN/FR)
  */
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [currentLang, setCurrentLang] = useState("EN");
+  const { locale, cycleLocale, t } = useTranslation();
+
+  const navItems: { label: string; href: string; highlight: boolean; external?: boolean }[] = [
+    { label: t.nav.home, href: "/", highlight: false },
+    { label: t.nav.tracks, href: "/#tracks", highlight: false },
+    { label: t.nav.schedule, href: "/#schedule", highlight: false },
+    { label: t.nav.speakers, href: "/#speakers", highlight: false },
+    { label: t.nav.venue, href: "/#venue", highlight: false },
+    { label: t.nav.register, href: "https://cfp.gosim.org/", highlight: true, external: true },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,8 +35,7 @@ export function Header() {
 
   const handleNavClick = (href: string) => {
     setIsMobileMenuOpen(false);
-    
-    // Handle smooth scroll for anchor links
+
     if (href.startsWith("/#")) {
       const element = document.querySelector(href.substring(1));
       if (element) {
@@ -55,14 +54,13 @@ export function Header() {
     >
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <div className="flex-shrink-0">
             <Logo variant="compact" />
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-            {NAV_ITEMS.map((item) =>
+            {navItems.map((item) =>
               item.external ? (
                 <a
                   key={item.href}
@@ -98,41 +96,29 @@ export function Header() {
               )
             )}
 
-            {/* Language Switcher */}
             <button
-              onClick={() => {
-                const langs = ["EN", "CN", "FR"];
-                const currentIndex = langs.indexOf(currentLang);
-                const nextLang = langs[(currentIndex + 1) % langs.length];
-                setCurrentLang(nextLang);
-              }}
+              onClick={cycleLocale}
               className="flex items-center gap-1 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-              title="Switch language (placeholder)"
+              title="Switch language"
             >
               <Globe className="h-4 w-4" />
-              <span>{currentLang}</span>
+              <span>{LOCALE_LABELS[locale]}</span>
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="lg:hidden p-2 text-foreground hover:text-primary transition-colors"
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
+            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="lg:hidden mt-4 py-4 border-t border-border">
             <div className="flex flex-col gap-4">
-              {NAV_ITEMS.map((item) =>
+              {navItems.map((item) =>
                 item.external ? (
                   <a
                     key={item.href}
@@ -171,18 +157,12 @@ export function Header() {
                 )
               )}
 
-              {/* Language Switcher Mobile */}
               <button
-                onClick={() => {
-                  const langs = ["EN", "CN", "FR"];
-                  const currentIndex = langs.indexOf(currentLang);
-                  const nextLang = langs[(currentIndex + 1) % langs.length];
-                  setCurrentLang(nextLang);
-                }}
+                onClick={cycleLocale}
                 className="flex items-center justify-center gap-2 px-4 py-2 text-base font-medium text-muted-foreground"
               >
                 <Globe className="h-5 w-5" />
-                <span>Language: {currentLang}</span>
+                <span>{t.nav.language}: {LOCALE_LABELS[locale]}</span>
               </button>
             </div>
           </div>

@@ -1,20 +1,19 @@
+"use client";
+
 import { Scale } from "lucide-react";
 import { TrackLayout } from "@/components/tracks/TrackLayout";
+import { useTranslation } from "@/lib/i18n";
 
 export default function GovernanceTrack() {
+  const { t } = useTranslation();
+
   return (
     <TrackLayout
-      title="Trusted Agentic AI"
+      title={t.trackGovernance.title}
       icon={<Scale className="h-14 w-14 text-primary" />}
       gradient="bg-gradient-to-br from-accent/20 via-background to-primary/10"
-      overview="Addressing the governance, safety, and sovereignty challenges of increasingly autonomous systems. Topics include evaluation frameworks, responsible deployment of coding agents, regulatory trends (e.g., AI Acts), sovereign AI models, and anticipatory governance approaches for maintaining trust at scale."
-      keyTopics={[
-        "Anticipatory Governance for Agentic AI",
-        "Autonomous coding agents and responsible deployment",
-        "AI Act compliance and regulatory landscape",
-        "Sovereign AI models and national considerations",
-        "Evaluation frameworks and trust metrics",
-      ]}
+      overview={t.trackGovernance.overview}
+      keyTopics={t.trackGovernance.keyTopics}
       resources={[
         {
           title: "EU AI Act Official Text",
@@ -27,17 +26,16 @@ export default function GovernanceTrack() {
       ]}
     >
       <div className="prose prose-invert max-w-none">
-        <h2 className="text-2xl font-bold mb-4">Governance, Safety, and Sovereignty</h2>
+        <h2 className="text-2xl font-bold mb-4">{t.trackGovernance.approachTitle}</h2>
         <p className="text-muted-foreground">
-          As AI systems become increasingly autonomous, maintaining trust requires proactive governance frameworks. This panel brings together trust and safety experts alongside social and economic impact researchers to address the challenges of governing agentic AI at scale — from regulatory compliance to sovereign AI considerations.
+          {t.trackGovernance.approachText}
         </p>
 
-        <h3 className="text-xl font-bold mt-8 mb-4">Key Discussions</h3>
+        <h3 className="text-xl font-bold mt-8 mb-4">{t.trackGovernance.outcomesTitle}</h3>
         <ul className="space-y-2 text-muted-foreground">
-          <li>Anticipatory governance approaches for agentic AI systems</li>
-          <li>Responsible deployment frameworks for autonomous coding agents</li>
-          <li>Navigating the AI Act and evolving regulatory landscape</li>
-          <li>Building evaluation frameworks and trust metrics at scale</li>
+          {t.trackGovernance.outcomes.map((outcome, index) => (
+            <li key={index}>{outcome}</li>
+          ))}
         </ul>
       </div>
     </TrackLayout>

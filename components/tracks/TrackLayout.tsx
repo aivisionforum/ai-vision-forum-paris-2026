@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { ArrowLeft, Users, BookOpen } from "lucide-react";
+import { useTranslation } from "@/lib/i18n";
 
 interface TrackLayoutProps {
   title: string;
@@ -27,6 +28,8 @@ export function TrackLayout({
   resources = [],
   children,
 }: TrackLayoutProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -34,14 +37,14 @@ export function TrackLayout({
         className={`relative px-4 py-32 pt-32 overflow-hidden ${gradient}`}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
-        
+
         <div className="container relative z-10 mx-auto max-w-4xl text-center">
           <Link
             href="/#tracks"
             className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
           >
             <ArrowLeft className="h-4 w-4" />
-            Back to Tracks
+            {t.trackDetail.backToTracks}
           </Link>
 
           <div className="mb-6">{icon}</div>
@@ -55,7 +58,7 @@ export function TrackLayout({
       {/* Key Topics */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="mb-8 text-3xl font-bold">Key Topics</h2>
+          <h2 className="mb-8 text-3xl font-bold">{t.trackDetail.keyTopics}</h2>
           <div className="grid gap-4 md:grid-cols-2">
             {keyTopics.map((topic, index) => (
               <div
@@ -77,7 +80,7 @@ export function TrackLayout({
         <div className="container mx-auto max-w-4xl">
           <div className="mb-8 flex items-center gap-3">
             <Users className="h-6 w-6 text-primary" />
-            <h2 className="text-3xl font-bold">Featured Speakers</h2>
+            <h2 className="text-3xl font-bold">{t.trackDetail.featuredSpeakers}</h2>
           </div>
 
           {speakers.length > 0 ? (
@@ -98,10 +101,10 @@ export function TrackLayout({
           ) : (
             <div className="rounded-lg border border-dashed border-border bg-card/50 p-12 text-center">
               <p className="text-lg text-muted-foreground">
-                Speakers to be announced soon
+                {t.trackDetail.speakersComingSoon}
               </p>
               <p className="mt-2 text-sm text-muted-foreground">
-                We're curating an exceptional lineup of experts for this track
+                {t.trackDetail.speakersCurating}
               </p>
             </div>
           )}
@@ -119,7 +122,7 @@ export function TrackLayout({
       {resources.length > 0 && (
         <section className="py-16 px-4">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="mb-8 text-3xl font-bold">Related Resources</h2>
+            <h2 className="mb-8 text-3xl font-bold">{t.trackDetail.relatedResources}</h2>
             <div className="space-y-3">
               {resources.map((resource, index) => (
                 <a
@@ -144,18 +147,18 @@ export function TrackLayout({
         <div className="container mx-auto max-w-4xl text-center">
           <div className="rounded-2xl border border-border bg-gradient-to-br from-primary/5 to-secondary/5 p-12">
             <h2 className="mb-4 text-2xl font-bold md:text-3xl">
-              Interested in this track?
+              {t.trackDetail.interestedInTrack}
             </h2>
             <p className="mb-6 text-muted-foreground">
-              Request an invitation to join the conversation
+              {t.trackDetail.requestInvitationToJoin}
             </p>
             <a
-              href="https://cfp.gosim.org"
+              href="https://cfp.gosim.org/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block rounded-full bg-accent px-8 py-4 font-semibold text-accent-foreground transition-all hover:scale-105 hover:shadow-xl hover:shadow-accent/30"
             >
-              Request Invitation
+              {t.trackDetail.requestInvitation}
             </a>
           </div>
         </div>
