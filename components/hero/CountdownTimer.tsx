@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { COUNTDOWN_TARGET } from "@/lib/constants";
+import { useTranslation } from "@/lib/i18n";
 
 interface TimeLeft {
   days: number;
@@ -15,6 +16,7 @@ interface TimeLeft {
  * Features flip animation for smooth transitions
  */
 export function CountdownTimer() {
+  const { t } = useTranslation();
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: 0,
     hours: 0,
@@ -49,13 +51,13 @@ export function CountdownTimer() {
 
   return (
     <div className="flex items-center justify-center gap-4 md:gap-6">
-      <TimeUnit value={timeLeft.days} label="Days" />
+      <TimeUnit value={timeLeft.days} label={t.countdown.days} />
       <Separator />
-      <TimeUnit value={timeLeft.hours} label="Hours" />
+      <TimeUnit value={timeLeft.hours} label={t.countdown.hours} />
       <Separator />
-      <TimeUnit value={timeLeft.minutes} label="Minutes" />
+      <TimeUnit value={timeLeft.minutes} label={t.countdown.minutes} />
       <Separator />
-      <TimeUnit value={timeLeft.seconds} label="Seconds" />
+      <TimeUnit value={timeLeft.seconds} label={t.countdown.seconds} />
     </div>
   );
 }

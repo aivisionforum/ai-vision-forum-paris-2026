@@ -21,6 +21,12 @@ export function TypewriterText({
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
+    // Reset when text changes (e.g. language switch)
+    setDisplayedText("");
+    setCurrentIndex(0);
+  }, [text]);
+
+  useEffect(() => {
     if (currentIndex < text.length) {
       const timeout = setTimeout(() => {
         setDisplayedText((prev) => prev + text[currentIndex]);

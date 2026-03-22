@@ -4,12 +4,14 @@ import Link from "next/link";
 import { Github, Twitter, Linkedin } from "lucide-react";
 import { Logo } from "@/components/branding/Logo";
 import { EVENT_CONFIG, SOCIAL_LINKS } from "@/lib/constants";
+import { useTranslation } from "@/lib/i18n";
 
 /**
  * Professional footer with branding, links, and social media
  */
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const { t } = useTranslation();
 
   return (
     <footer className="border-t border-border bg-card/50 backdrop-blur-sm">
@@ -19,23 +21,23 @@ export function Footer() {
           <div className="space-y-4">
             <Logo variant="full" />
             <p className="text-sm text-muted-foreground">
-              {EVENT_CONFIG.tagline}
+              {t.hero.tagline}
             </p>
             <p className="text-xs text-muted-foreground">
-              {EVENT_CONFIG.location.city}, {EVENT_CONFIG.location.country} • {EVENT_CONFIG.dateDisplay}
+              {EVENT_CONFIG.location.city}, {EVENT_CONFIG.location.country} • {t.hero.dateDisplay}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="mb-4 text-sm font-semibold">Quick Links</h3>
+            <h3 className="mb-4 text-sm font-semibold">{t.footer.quickLinks}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   href="/#about"
                   className="text-muted-foreground transition-colors hover:text-primary"
                 >
-                  About
+                  {t.footer.about}
                 </Link>
               </li>
               <li>
@@ -43,7 +45,7 @@ export function Footer() {
                   href="/#tracks"
                   className="text-muted-foreground transition-colors hover:text-primary"
                 >
-                  Tracks
+                  {t.footer.tracks}
                 </Link>
               </li>
               <li>
@@ -51,7 +53,7 @@ export function Footer() {
                   href="/#schedule"
                   className="text-muted-foreground transition-colors hover:text-primary"
                 >
-                  Schedule
+                  {t.footer.schedule}
                 </Link>
               </li>
               <li>
@@ -59,7 +61,7 @@ export function Footer() {
                   href="/#speakers"
                   className="text-muted-foreground transition-colors hover:text-primary"
                 >
-                  Speakers
+                  {t.footer.speakers}
                 </Link>
               </li>
             </ul>
@@ -67,14 +69,14 @@ export function Footer() {
 
           {/* Legal */}
           <div>
-            <h3 className="mb-4 text-sm font-semibold">Legal</h3>
+            <h3 className="mb-4 text-sm font-semibold">{t.footer.legal}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   href="/privacy"
                   className="text-muted-foreground transition-colors hover:text-primary"
                 >
-                  Privacy Policy
+                  {t.footer.privacyPolicy}
                 </Link>
               </li>
               <li>
@@ -82,12 +84,12 @@ export function Footer() {
                   href="/contact"
                   className="text-muted-foreground transition-colors hover:text-primary"
                 >
-                  Contact
+                  {t.footer.contact}
                 </Link>
               </li>
               <li>
                 <span className="text-xs text-muted-foreground">
-                  Under Chatham House Rule
+                  {t.footer.underChathamHouseRule}
                 </span>
               </li>
             </ul>
@@ -95,7 +97,7 @@ export function Footer() {
 
           {/* Social & Partnership */}
           <div>
-            <h3 className="mb-4 text-sm font-semibold">Connect</h3>
+            <h3 className="mb-4 text-sm font-semibold">{t.footer.connect}</h3>
             <div className="flex gap-3 mb-4">
               <a
                 href={SOCIAL_LINKS.github}
@@ -126,7 +128,7 @@ export function Footer() {
               </a>
             </div>
             <p className="text-xs text-muted-foreground">
-              Co-located with{" "}
+              {t.footer.colocatedWith}{" "}
               <a
                 href="https://paris2026.gosim.org"
                 target="_blank"
@@ -141,9 +143,9 @@ export function Footer() {
 
         {/* Copyright */}
         <div className="mt-8 pt-8 border-t border-border text-center text-xs text-muted-foreground">
-          <p>© {currentYear} AI Vision Forum. All rights reserved.</p>
+          <p>&copy; {currentYear} {t.footer.copyright}</p>
           <p className="mt-1">
-            Organized by the AI Vision Forum community • Invitation-only event
+            {t.footer.organizedBy}
           </p>
         </div>
       </div>

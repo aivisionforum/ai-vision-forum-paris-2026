@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useTranslation } from "@/lib/i18n";
 
 interface LogoProps {
   variant?: "full" | "compact";
@@ -12,10 +13,12 @@ interface LogoProps {
  * Features modern typography with gradient effects
  */
 export function Logo({ variant = "full", className = "" }: LogoProps) {
+  const { t } = useTranslation();
+
   if (variant === "compact") {
     return (
-      <Link 
-        href="/" 
+      <Link
+        href="/"
         className={`group flex items-center gap-2 transition-opacity hover:opacity-80 ${className}`}
       >
         <div className="relative">
@@ -29,8 +32,8 @@ export function Logo({ variant = "full", className = "" }: LogoProps) {
   }
 
   return (
-    <Link 
-      href="/" 
+    <Link
+      href="/"
       className={`group flex flex-col transition-opacity hover:opacity-80 ${className}`}
     >
       <div className="flex items-baseline gap-2">
@@ -42,44 +45,8 @@ export function Logo({ variant = "full", className = "" }: LogoProps) {
         </span>
       </div>
       <div className="mt-0.5 text-[0.6rem] font-medium tracking-widest text-muted-foreground md:text-xs">
-        AGENTS SHAPING TOMORROW
+        {t.logo.tagline}
       </div>
     </Link>
-  );
-}
-
-/**
- * Animated logo with glow effect for hero sections
- */
-export function AnimatedLogo({ className = "" }: { className?: string }) {
-  return (
-    <div className={`flex flex-col items-center ${className}`}>
-      <div className="relative">
-        {/* Glow effect background */}
-        <div className="absolute inset-0 animate-pulse-slow blur-2xl opacity-30">
-          <span className="text-6xl font-bold text-primary md:text-8xl">
-            AIVF 2026
-          </span>
-        </div>
-        
-        {/* Main logo */}
-        <div className="relative flex flex-col items-center gap-3">
-          <h1 className="text-5xl font-bold tracking-tighter text-gradient-primary md:text-7xl lg:text-8xl">
-            AI VISION FORUM
-          </h1>
-          <div className="flex items-center gap-3">
-            <div className="h-px w-8 bg-gradient-to-r from-transparent via-accent to-transparent" />
-            <span className="text-xl font-semibold text-accent md:text-2xl">
-              PARIS 2026
-            </span>
-            <div className="h-px w-8 bg-gradient-to-r from-transparent via-accent to-transparent" />
-          </div>
-        </div>
-      </div>
-      
-      <p className="mt-6 text-sm font-medium tracking-widest text-muted-foreground md:text-base">
-        AGENTS SHAPING TOMORROW
-      </p>
-    </div>
   );
 }
