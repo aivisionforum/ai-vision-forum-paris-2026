@@ -65,27 +65,33 @@ export const TRACKS = [
   }
 ] as const;
 
-// Why Now: The AI Agent Landscape
+// Why Now: From LAMP to Claw
 export const WHY_NOW = {
-  title: "The AI Agent Landscape Shaping This Forum",
-  intro: "Three structural shifts make May 2026 the right moment for this convening. These are not trends that will fade — they are tectonic changes that will be more relevant by May, not less.",
+  title: "Why Now: From LAMP to Claw",
+  intro: "The AI Vision Forum 2026 arrives at a pivotal moment in computing history. We are witnessing a paradigm shift comparable to the LAMP stack revolution of the 2000s — but this time, the infrastructure serves AI agents, not just humans.",
   shifts: [
     {
       id: 1,
-      title: "The Rise of Spec-Driven Development (the \"Dark Factory\")",
-      description: "AI coding agents have matured from autocomplete (Level 2) to autonomous software factories (Level 5). Dan Shapiro's L0–L5 framework provides the shared vocabulary. StrongDM's 3-person Software Factory has proven L5 works: they write only natural-language specifications; agents generate all code with no human review. AWS Kiro, GitHub spec-kit, and Tessl are commercializing this paradigm."
+      title: "Era 1 (2000s): LAMP Stack",
+      description: "Linux, Apache, MySQL, PHP/Python — open-source technologies that democratized web development. LAMP served humans by enabling websites and applications at scale."
     },
     {
       id: 2,
-      title: "The Governance Gap for AI Agents",
-      description: "Traditional open-source governance — code review, meritocracy, contributor identity — was built for humans. It breaks when AI agents become the contributors. The OWASP Agentic AI Top 10, the AAIF (Linux Foundation, housing MCP and AGENTS.md), and tools like StrongDM's Leash (Cedar-based AI agent policy enforcement) are racing to fill this gap. The EU AI Act reaches full enforcement August 2, 2026."
+      title: "Era 2 (2010s): Cloud/SaaS",
+      description: "Cloud-native computing, API economy, centralized platforms. Elastic scaling, rapid delivery, global connectivity — but increasingly centralized control."
     },
     {
       id: 3,
-      title: "Open-Source Sustainability Crisis Amplified by AI",
-      description: "AI trains on open-source code, users get value without visiting docs, revenue funnels break. Tailwind CSS saw 80% revenue decline despite record usage. 60% of maintainers work unpaid. 454K malicious packages identified in 2025. New funding models (OpenToken with UN DPGA, HeroDevs, Open Source Pledge) are emerging but unproven."
+      title: "Era 3 (Now): Claw Stack",
+      description: "Compute, Language Models, Agents, Workflow — a unified framework for intelligent systems. The Claw Stack marks the arrival of the Agentic Economy: autonomous intelligence, decentralized networks, and open governance."
     }
-  ]
+  ],
+  coreInsight: {
+    title: "The Core Insight: Who Does Infrastructure Serve?",
+    lamp: "LAMP served humans — providing intuitive control and insight for managing complex digital environments.",
+    claw: "Claw serves agents — providing infrastructure where AI agents can autonomously make decisions, collaborate on tasks, and execute work.",
+    governanceGap: "Just as the LAMP era had the Linux Foundation to coordinate open-source development, the Claw era needs AOSF (Agentic Open Source Foundation) — the Linux Foundation for the agentic stack."
+  }
 } as const;
 
 // Our Unique Value Proposition
@@ -112,25 +118,29 @@ export const VALUE_PROPOSITION = [
   }
 ] as const;
 
-// AOSF Integration
+// AOSF Integration — Governance Framework for the Agentic Era
 export const AOSF_INFO = {
   name: "Agentic Open Source Foundation",
-  tagline: "Neutral, transparent governance for AI-generated open source software",
-  description: "AOSF is the first open source foundation purpose-built for the age of AI-generated code, bridging the gap between AI-generated software and the governance, security, and quality frameworks needed to make it trustworthy.",
+  tagline: "The Linux Foundation for the Agentic Stack",
+  description: "If LAMP made web applications possible, AOSF makes autonomous intelligence trustworthy. AOSF governs what LAMP never needed.",
   url: "https://aosf-org.github.io",
   github: "https://github.com/aosf-org",
-  coreFunctions: [
-    "Vibe-Coded Project Repository with quality tiers (Experimental → Validated → Production-Ready → Enterprise-Certified)",
-    "Rust Migration Initiative — AI-assisted translation of critical C/C++ infrastructure to memory-safe Rust",
-    "Agentic-Native Operations — Agent-assisted code review with transparent audit trails",
-    "Ethical AI Development Standards — Attribution, licensing, and human-in-the-loop frameworks"
+  governanceAreas: [
+    { title: "Intent (意图)", description: "Goal alignment — ensuring AI agents pursue objectives aligned with human values across multi-agent systems." },
+    { title: "Agents (代理)", description: "Trust protocols — authentication, capability certification, and identity verification for AI agents." },
+    { title: "Economic Coordination (经济协调)", description: "Incentive mechanisms — sustainable funding models and value distribution in agentic ecosystems." }
   ],
-  keyStats: [
-    "$47–93B — Projected agentic AI market by 2030–2032",
-    "45% — AI-generated code containing security vulnerabilities",
-    "60,000+ — Projects with AGENTS.md",
-    "1B+ — Lines of C/C++ to rewrite in memory-safe languages"
-  ]
+  strategicInitiatives: [
+    { id: "A", title: "Open Agent Identity", concept: "OAuth for Agents", objective: "Unified authentication ensuring secure mutual trust" },
+    { id: "B", title: "Open Spec Standard", concept: "HTML for Intent", objective: "Common intent description language for cross-platform understanding" },
+    { id: "C", title: "Orchestration Standard", concept: "Kubernetes for Agents", objective: "Intelligent agent routing and coordination" },
+    { id: "D", title: "Open Token", concept: "Public AI Compute", objective: "Fair distribution of AI computing power as public good" },
+    { id: "E", title: "Agent Marketplace", concept: "Capability Exchange", objective: "Trading capabilities, not just software" }
+  ],
+  openToken: {
+    description: "Open Token is NOT cryptocurrency — it is a metering and settlement mechanism for AI computing power, analogous to how kilowatt-hours measure electricity.",
+    goals: ["Accessibility", "Sustainability", "Growth"]
+  }
 } as const;
 
 export const REFERENCE_SITES = {
@@ -174,11 +184,23 @@ export const SCHEDULE_OUTLINE = [
   { time: "09:00–09:15", title: "Opening Remarks" },
   { time: "09:15–10:30", title: "Panel 1: Agentic AI Systems — Human–AI Symbiosis", subtitle: "Building the Agentic Ecosystem", format: "Keynote + Panel" },
   { time: "10:30–10:45", title: "Break" },
-  { time: "10:45–12:00", title: "Panel 2: Agentic AI in Applications", subtitle: "Learning, Creativity, and Real-World Use", format: "Keynote + Panel" },
+  { time: "10:45–12:00", title: "Panel 2: Agentic AI in Education", subtitle: "Learning, Creativity, and Real-World Use", format: "Keynote + Panel" },
   { time: "12:00–13:30", title: "Lunch + AIGC Spotlight Showcase", subtitle: "Creative & technical works from the AI community", format: "Demo showcase" },
   { time: "13:30–14:45", title: "Panel 3: Trusted Agentic AI", subtitle: "Governance, Safety, and Sovereignty", format: "Keynote + Panel" },
   { time: "14:45–15:00", title: "Break" },
   { time: "15:00–16:15", title: "Panel 4: Open Token & Digital Public Goods", subtitle: "Foundations for an Agentic Commons", format: "Keynote + Panel" },
   { time: "16:15–16:45", title: "Synthesis & Closing" },
-  { time: "17:00–19:30", title: "Networking Dinner" }
+  { time: "17:00–19:30", title: "Networking Dinner", subtitle: "Themed tables", format: "Networking" }
+] as const;
+
+// Paris 2026 Core Topics — Eight key themes framing the forum discussions
+export const CORE_TOPICS = [
+  { id: 1, topic: "Open Source → Open Intent", concept: "Strategic Shift", implication: "Focus shifts from code availability to purpose alignment" },
+  { id: 2, topic: "Who Owns the Agent?", concept: "Ownership & Control", implication: "Defining rights and responsibilities in autonomous systems" },
+  { id: 3, topic: "Claw Stack Architecture", concept: "Architecture", implication: "Standardizing modular, interoperable agent components" },
+  { id: 4, topic: "Token Governance", concept: "Governance", implication: "Utilizing tokens for decentralized, community-aligned decision making" },
+  { id: 5, topic: "Dark Factory & Trust", concept: "Trust & Security", implication: "Ensuring transparency and accountability in automated processes" },
+  { id: 6, topic: "AI Factory vs. Open Ecosystem", concept: "Ecosystem Models", implication: "Contrasting centralized production with collaborative networks" },
+  { id: 7, topic: "Orchestration Standardization", concept: "Standardization", implication: "Harmonizing how different agents and services interact" },
+  { id: 8, topic: "Ethical Frameworks for AI", concept: "Ethics", implication: "Establishing guiding principles for responsible AI behavior" }
 ] as const;

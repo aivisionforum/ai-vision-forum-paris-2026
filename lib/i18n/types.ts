@@ -5,7 +5,6 @@ export interface Translations {
   nav: {
     home: string;
     tracks: string;
-    cello: string;
     schedule: string;
     speakers: string;
     venue: string;
@@ -57,6 +56,7 @@ export interface Translations {
     title: string;
     subtitle: string;
     featured: string;
+    narrativeArc?: string;
     tracks: {
       title: string;
       subtitle: string;
@@ -90,10 +90,6 @@ export interface Translations {
     coreFunctions: string[];
     keyStatsTitle: string;
     keyStats: string[];
-    celloFullName: string;
-    celloDescription: string;
-    celloTrack: string;
-    celloDemoStatus: string;
     visitAosf: string;
     viewLeaderboard: string;
   };
